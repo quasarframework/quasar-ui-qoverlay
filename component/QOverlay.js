@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import slot from 'quasar/src/utils/slot.js'
-import ModelToggleMixin from 'quasar/src//mixins/model-toggle.js'
+import ModelToggleMixin from 'quasar/src/mixins/model-toggle.js'
 
 export default Vue.extend({
   name: 'QOverlay',
@@ -14,7 +14,7 @@ export default Vue.extend({
     },
     zIndex: {
       type: [Number, String],
-      default: 5000
+      default: 200
     },
     cursorType: {
       type: String,
@@ -79,7 +79,7 @@ export default Vue.extend({
 
     if (this.value) {
       return h('div', {
-        class: this.wrapperClasses,
+        class: this.wrapperClasses
       }, [overlay].concat(this.$slots.default))
     }
     else {
