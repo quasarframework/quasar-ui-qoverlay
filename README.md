@@ -31,9 +31,11 @@ Can be found [here](https://qoverlay.netlify.com/#/).
 # Example Code
 
 ## Fullscreen overlay
+You may have to set the `z-index` property (default 200) for fullscreen. Just make sure it has a z-index higher than other visible components.
+
 **Template code**
   ```html
-<q-overlay v-model="fullscreen">
+<q-overlay v-model="fullscreen" z-index="5000">
   <template v-slot:body>
     <div class="fullscreen row justify-center items-center">
       <q-spinner v-if="fullscreen && waiting" color="yellow" size="3em" />
@@ -123,7 +125,7 @@ Can be found [here](https://qoverlay.netlify.com/#/).
 |---|---|---|---|
 | value | Boolean | | Use v-model to control active state |
 | opacity | Number,String | 0.35 | Used to change the opacity of the overlay |
-| z-index | Number,String | 5000 | Used to change the z-index of the overlay |
+| z-index | Number,String | 200 | Used to change the z-index of the overlay |
 | cursor-type | String | not-allowed | ["not-allowed","pointer","none"] Used to change the cursor type of the overlay |
 
 # QOverlay Vue Slots

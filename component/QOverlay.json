@@ -14,8 +14,8 @@
     "z-index": {
       "type": [ "Number", "String" ],
       "desc": "Used to change the z-index of the overlay",
-      "default": "5000",
-      "examples": [ "2000" ]
+      "default": "200",
+      "examples": [ "5000" ]
     },
     "cursor-type": {
       "type": "String",
