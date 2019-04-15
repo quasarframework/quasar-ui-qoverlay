@@ -41,11 +41,8 @@ export default Vue.extend({
 
     if (this.value === true) {
       const overlay = h('div', {
-        class: {
-          'fixed fullscreen': isFullscreen,
-          'absolute fit': isFullscreen === false,
-          [`cursor-${this.cursorType}`]: true
-        },
+        class: `cursor-${this.cursorType} ` +
+          (isFullscreen === true ? 'fixed fullscreen' : 'absolute fit'),
         style: this.styles
       }, slot(this, 'body'))
 
