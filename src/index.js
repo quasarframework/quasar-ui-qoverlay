@@ -10,8 +10,9 @@ const extendWithOverlay = function (api, conf) {
   let boot = conf.boot
 
   // make sure qoverlay boot file is registered
-  if (!boot.includes('~@quasar/quasar-app-extension-qoverlay/src/boot/qoverlay.js')) {
-    boot.push('~@quasar/quasar-app-extension-qoverlay/boot/qoverlay.js')
+  const bootFile = '~@quasar/quasar-app-extension-qoverlay/src/boot/qoverlay.js'
+  if (!boot.includes(bootFile)) {
+    boot.push(bootFile)
     // make sure boot file transpiles
     conf.build.transpileDependencies.push(/quasar-app-extension-qoverlay[\\/]src[\\/]boot/)
     console.log(` App Extension (qoverlay) Info: 'Adding qoverlay boot reference to your quasar.conf.js'`)
