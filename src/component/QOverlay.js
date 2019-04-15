@@ -37,7 +37,7 @@ export default Vue.extend({
   render (h) {
     const
       defSlot = slot(this, 'default'),
-      isFullscreen = defSlot !== void 0
+      isFullscreen = defSlot === void 0
 
     if (this.value === true) {
       const overlay = h('div', {
