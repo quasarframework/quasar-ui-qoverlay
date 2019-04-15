@@ -17,12 +17,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "bugs": "https://github.com/hawkeye64/app-extension-qoverlay/issues",
+  "bugs": "https://github.com/quasarframework/app-extension-qoverlay/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hawkeye64/app-extension-qoverlay.git"
+    "url": "git+https://github.com/quasarframework/app-extension-qoverlay.git"
   },
-  "homepage": "https://github.com/hawkeye64/app-extension-qoverlay",
+  "homepage": "https://github.com/quasarframework/app-extension-qoverlay",
   "license": "MIT",
   "keywords": [
     "quasar",

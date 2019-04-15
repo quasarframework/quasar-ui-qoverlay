@@ -49,8 +49,7 @@ export default Vue.extend({
       return h('div', {
         staticClass: 'absolute'
       }, [overlay].concat(defSlot))
-    }
-    else if (defSlot !== void 0) {
+    } else if (defSlot !== void 0) {
       return h('div', {
         staticClass: 'absolute'
       }, defSlot)
