@@ -13,13 +13,15 @@ const extendConf = function (api, conf) {
   const bootFile = '~@quasar/quasar-app-extension-qoverlay/src/boot/qoverlay.js'
   if (!boot.includes(bootFile)) {
     boot.push(bootFile)
-    // make sure boot file transpiles
-    conf.build.transpileDependencies.push(/quasar-app-extension-qoverlay[\\/]src[\\/]boot/)
     console.log(` App Extension (qoverlay) Info: 'Adding qoverlay boot reference to your quasar.conf.js'`)
   }
+
+  // make sure boot file transpiles
+  conf.build.transpileDependencies.push(/quasar-app-extension-qoverlay[\\/]src/)
 }
 
 module.exports = function (api, ctx) {
+  console.log(api.quasarAppVersion)
   // quasar compatibility check
   api.compatibleWithQuasarApp('^1.0.0-beta.17')
 
