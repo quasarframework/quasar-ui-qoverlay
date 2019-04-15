@@ -21,7 +21,6 @@ const extendConf = function (api, conf) {
 }
 
 module.exports = function (api, ctx) {
-  console.log(api.quasarAppVersion)
   // quasar compatibility check
   api.compatibleWithQuasarApp('^1.0.0-beta.17')
 
