@@ -20,6 +20,9 @@ const extendConf = function (api, conf) {
 }
 
 module.exports = function (api, ctx) {
+  // quasar compatibility check
+  api.compatibleWithQuasarApp('^1.0.0-beta.17')
+
   // register JSON api
   api.registerDescribeApi('QOverlay', './component/QOverlay.json')
 
