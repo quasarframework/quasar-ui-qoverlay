@@ -5,7 +5,7 @@
  * API: https://github.com/quasarframework/quasar/blob/master/app/lib/app-extension/IndexAPI.js
  */
 
-const extendWithOverlay = function (api, conf) {
+const extendConf = function (api, conf) {
   // for brevity
   let boot = conf.boot
 
@@ -25,6 +25,6 @@ module.exports = function (api, ctx) {
 
   // extend quasar.conf
   api.extendQuasarConf((conf) => {
-    extendWithOverlay(api, conf)
+    extendConf(api, conf)
   })
 }
