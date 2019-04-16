@@ -6,23 +6,17 @@
  */
 
 const extendConf = function (api, conf) {
-  // for brevity
-  let boot = conf.boot
-
   // make sure qoverlay boot file is registered
-  const bootFile = '~@quasar/quasar-app-extension-qoverlay/src/boot/qoverlay.js'
-  if (!boot.includes(bootFile)) {
-    boot.push(bootFile)
-    console.log(` App Extension (qoverlay) Info: 'Adding qoverlay boot reference to your quasar.conf.js'`)
-  }
+  conf.boot.push('~@quasar/quasar-app-extension-qoverlay/src/boot/qoverlay.js')
+  console.log(` App Extension (qoverlay) Info: 'Adding qoverlay boot reference to your quasar.conf.js'`)
 
-  // make sure boot file transpiles
+  // make sure boot & component files transpile
   conf.build.transpileDependencies.push(/quasar-app-extension-qoverlay[\\/]src/)
 }
 
-module.exports = function (api, ctx) {
+module.exports = function (api) {
   // quasar compatibility check
-  api.compatibleWithQuasarApp('^1.0.0-beta.17')
+  api.compatibleWith('@quasar/app', '^1.0.0-beta.18')
 
   // register JSON api
   api.registerDescribeApi('QOverlay', './component/QOverlay.json')
