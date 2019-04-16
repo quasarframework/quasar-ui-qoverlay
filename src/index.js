@@ -5,7 +5,7 @@
  * API: https://github.com/quasarframework/quasar/blob/master/app/lib/app-extension/IndexAPI.js
  */
 
-const extendConf = function (api, conf) {
+const extendConf = function (conf) {
   // make sure qoverlay boot file is registered
   conf.boot.push('~@quasar/quasar-app-extension-qoverlay/src/boot/qoverlay.js')
   console.log(` App Extension (qoverlay) Info: 'Adding qoverlay boot reference to your quasar.conf.js'`)
@@ -22,7 +22,5 @@ module.exports = function (api) {
   api.registerDescribeApi('QOverlay', './component/QOverlay.json')
 
   // extend quasar.conf
-  api.extendQuasarConf((conf) => {
-    extendConf(api, conf)
-  })
+  api.extendQuasarConf(extendConf)
 }
