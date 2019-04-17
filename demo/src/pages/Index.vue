@@ -60,7 +60,6 @@ export default {
   },
   watch: {
     fullscreen (val) {
-      console.log('fullscreen', val)
       clearTimeout(this.timerId)
       if (val) {
         this.waiting = true
@@ -72,7 +71,6 @@ export default {
       }
     },
     component (val) {
-      console.log('component', val)
       clearTimeout(this.timerId)
       if (val) {
         this.waiting = true
