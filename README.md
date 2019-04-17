@@ -21,10 +21,10 @@ quasar ext add @quasar/qoverlay
 You can use `quasar describe QOverlay`
 
 # Test Project
-Can be found [here](https://github.com/hawkeye64/quasar-app-extension-qoverlay).
+In **demo** folder of **app-extension-qoverlay**.
 
 # Demo
-Can be found [here](https://qoverlay.netlify.com/#/).
+Can be found [here](https://quasarframework.github.io/app-extension-qoverlay/demo/dist/spa/#/).
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/030677bc-74ca-445d-af9c-34d1437d741b/deploy-status)](https://app.netlify.com/sites/qoverlay/deploys)
 
