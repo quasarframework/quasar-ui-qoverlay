@@ -24,7 +24,7 @@ You can use `quasar describe QOverlay`
 In **demo** folder of **app-extension-qoverlay**.
 
 # Demo
-Can be found [here](https://quasarframework.github.io/app-extension-qoverlay/demo/dist/spa/#/).
+Can be found [here](https://quasarframework.github.io/app-extension-qoverlay/demo).
 
 # Example Code
 
