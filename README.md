@@ -134,5 +134,5 @@ You may have to set the `z-index` property (default 200) for fullscreen. Just ma
 
 QOverlay has no events or methods.
 
-# Patreon
-If you like (and use) this App Extension, please consider becoming a Quasar [Patreon](https://www.patreon.com/quasarframework).
+# Donate
+If you appreciate the work that went into this App Extension, please consider [donating to Quasar](https://donate.quasar.dev).
