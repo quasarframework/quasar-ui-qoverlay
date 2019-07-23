@@ -1,3 +1,7 @@
 {
-  "@quasar/qoverlay": {}
+  "@quasar/qoverlay": {},
+  "qautomate": {
+    "quasarConfFixMode": "automatic",
+    "sort": true
+  }
 }

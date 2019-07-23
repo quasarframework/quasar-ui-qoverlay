@@ -12,6 +12,10 @@ const extendConf = function (conf) {
 
   // make sure boot & component files transpile
   conf.build.transpileDependencies.push(/quasar-app-extension-qoverlay[\\/]src/)
+
+  // make sure qwindow css goes through webpack to avoid ssr issues
+  conf.css.push('~@quasar/quasar-app-extension-qoverlay/src/component/overlay.styl')
+  console.log(` App Extension (qoverlay) Info: 'Adding overlay.styl css reference to your quasar.conf.js'`)
 }
 
 module.exports = function (api) {

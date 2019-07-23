@@ -1954,6 +1954,11 @@ cliui@^4.0.0:
     strip-ansi "^4.0.0"
     wrap-ansi "^2.0.0"
 
+co@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/co/-/co-3.1.0.tgz#4ea54ea5a08938153185e15210c68d9092bc1b78"
+  integrity sha1-TqVOpaCJOBUxheFSEMaNkJK8G3g=
+
 coa@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/coa/-/coa-2.0.2.tgz#43f6c21151b4ef2bf57187db0d73de229e3e7ec3"
@@ -3451,7 +3456,7 @@ from2@^2.1.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
-fs-extra@8.1.0:
+fs-extra@8.1.0, fs-extra@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
   integrity sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==
@@ -4014,7 +4019,7 @@ ini@~1.3.0:
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
   integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
 
-inquirer@6.5.0, inquirer@^6.2.2:
+inquirer@6.5.0, inquirer@^6.2.2, inquirer@^6.4.1:
   version "6.5.0"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-6.5.0.tgz#2303317efc9a4ea7ec2e2df6f86569b734accf42"
   integrity sha512-scfHejeG/lVZSpvCXpsB4j/wQNPM5JC8kiElOI0OUTwmc1RTpXr4H32/HOlQHcZiYl2z2VElwuCVDRG8vFmbnA==
@@ -6184,6 +6189,17 @@ qs@6.7.0:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
 
+quasar-app-extension-qautomate@^1.0.0-alpha.5:
+  version "1.0.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/quasar-app-extension-qautomate/-/quasar-app-extension-qautomate-1.0.0-alpha.5.tgz#05c3ba95d17b78d180d2dae043c86a6b60629d99"
+  integrity sha512-VjClH4OJWEHOR3/rVj2jAl4pT/Mg/UBRtAruGDtbOtq09bmEiKEcbzET2tHOC2cMn3GjYA/7HQQpXBCC82ZSOQ==
+  dependencies:
+    chalk "^2.4.2"
+    fs-extra "^8.1.0"
+    inquirer "^6.4.1"
+    param-case "^2.1.1"
+    ware-loader "^0.2.4"
+
 quasar@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/quasar/-/quasar-1.0.4.tgz#b5e5aa2aa113a797729ed85728e88a4ebc5f1e0b"
@@ -6738,6 +6754,11 @@ slice-ansi@^2.1.0:
     ansi-styles "^3.2.0"
     astral-regex "^1.0.0"
     is-fullwidth-code-point "^2.0.0"
+
+sliced@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/sliced/-/sliced-1.0.1.tgz#0b3a662b5d04c3177b1926bea82b03f837a2ef41"
+  integrity sha1-CzpmK10Ewxd7GSa+qCsD+Dei70E=
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
@@ -7620,6 +7641,14 @@ vuex@3.1.1:
   resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.1.1.tgz#0c264bfe30cdbccf96ab9db3177d211828a5910e"
   integrity sha512-ER5moSbLZuNSMBFnEBVGhQ1uCBNJslH9W/Dw2W7GZN23UQA69uapP5GTT9Vm8Trc0PzBSVt6LzF3hGjmv41xcg==
 
+ware-loader@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/ware-loader/-/ware-loader-0.2.4.tgz#a8fec27d3c267e334d54d19287cee8d58235d421"
+  integrity sha512-UtqeEbNZX2ZDKzfzM/c/zgqQMWIZxTMKi/s5jUQ8OF7ShZ+gz4E7m+H3m7+88DmypQVcG6Ha9Efhfa6iuKFz2g==
+  dependencies:
+    loader-utils "^1.1.0"
+    wrapped "^1.0.1"
+
 watchpack@^1.5.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.6.0.tgz#4bc12c2ebe8aa277a71f1d3f14d685c7b446cd00"
@@ -7968,6 +7997,14 @@ wrap-ansi@^5.0.0:
     ansi-styles "^3.2.0"
     string-width "^3.0.0"
     strip-ansi "^5.0.0"
+
+wrapped@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/wrapped/-/wrapped-1.0.1.tgz#c783d9d807b273e9b01e851680a938c87c907242"
+  integrity sha1-x4PZ2Aeyc+mwHoUWgKk4yHyQckI=
+  dependencies:
+    co "3.1.0"
+    sliced "^1.0.1"
 
 wrappy@1:
   version "1.0.2"

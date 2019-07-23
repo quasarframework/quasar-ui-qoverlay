@@ -19,10 +19,9 @@
     },
     "cursor-type": {
       "type": "String",
-      "desc": "Used to change the cursor type of the overlay",
+      "desc": "Used to change the cursor type of the overlay. Any valid cursor type is allowed except for `url`",
       "default": "not-allowed",
-      "values": [ "not-allowed", "pointer", "none" ],
-      "examples": [ "pointer" ]
+      "examples": [ "pointer", "wait" ]
     }
   },
   "slots": {
