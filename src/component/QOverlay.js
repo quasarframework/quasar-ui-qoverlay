@@ -2,6 +2,9 @@ import Vue from 'vue'
 import slot from 'quasar/src/utils/slot.js'
 import ModelToggleMixin from 'quasar/src/mixins/model-toggle.js'
 
+// Styles
+import './overlay.styl'
+
 export default Vue.extend({
   name: 'QOverlay',
 
@@ -20,8 +23,7 @@ export default Vue.extend({
 
     cursorType: {
       type: String,
-      default: 'not-allowed',
-      validator: v => ['not-allowed', 'pointer', 'none'].includes(v)
+      default: 'not-allowed'
     }
   },
 
