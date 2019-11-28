@@ -1,11 +1,7 @@
-import Vue from 'vue'
-import slot from 'quasar/src/utils/slot.js'
+import { slot } from 'quasar/src/utils/slot.js'
 import ModelToggleMixin from 'quasar/src/mixins/model-toggle.js'
 
-// Styles
-import './overlay.styl'
-
-export default Vue.extend({
+export default {
   name: 'QOverlay',
 
   mixins: [ ModelToggleMixin ],
@@ -57,4 +53,4 @@ export default Vue.extend({
       }, defSlot)
     }
   }
-})
+}
