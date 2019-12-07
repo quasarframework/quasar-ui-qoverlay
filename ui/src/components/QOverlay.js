@@ -27,7 +27,9 @@ export default {
     styles () {
       return {
         zIndex: this.zIndex,
-        backgroundColor: `rgba(0,0,0,${this.opacity})`
+        backgroundColor: `rgba(0,0,0,${this.opacity})`,
+        padding: 0,
+        margin: 0
       }
     }
   },
@@ -47,11 +49,14 @@ export default {
       }, slot(this, 'body'))
 
       return h('div', {
-        staticClass: 'absolute'
+        staticClass: 'relative',
+        style: {
+          position: 'relative'
+        }
       }, [overlay].concat(defSlot))
     } else if (defSlot !== void 0) {
       return h('div', {
-        staticClass: 'absolute'
+        staticClass: ''
       }, defSlot)
     }
   }
