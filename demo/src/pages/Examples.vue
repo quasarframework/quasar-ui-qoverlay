@@ -4,8 +4,9 @@
       <q-markdown>
 In the examples below, QThemeMixin is dependent on the [QColorizeMixin](https://github.com/hawkeye64/q-colorize-mixin) to apply the actual colors.
       </q-markdown>
-      <example-title title="Theme Basic" />
-      <example-card title="Basic" name="Basic" :tag-parts="getTagParts(require('!!raw-loader!../examples/Basic.vue').default)" />
+      <example-title title="QOverlay Basic" />
+      <example-card title="Fullscreen" name="Basic" :tag-parts="getTagParts(require('!!raw-loader!../examples/Basic.vue').default)" />
+      <example-card title="On Component" name="OnComponent" :tag-parts="getTagParts(require('!!raw-loader!../examples/OnComponent.vue').default)" />
 
       <!-- <example-title title="Theme Advanced" />
       <example-card title="Theme Selection" name="ThemeSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ThemeSelection.vue').default)" />
@@ -40,9 +41,9 @@ export default {
   mounted () {
     this.toc = []
     this.tempToc = []
-    this.addToToc('Theme Basic')
-    // this.addToToc('Simple Theme', 2)
-    // this.addToToc('Theme Advanced')
+    this.addToToc('QOverlay Basic')
+    this.addToToc('Fullscreen', 2)
+    this.addToToc('On Component', 2)
     // this.addToToc('Theme Selection', 2)
     // this.addToToc('Theme Quasar Components', 2)
 

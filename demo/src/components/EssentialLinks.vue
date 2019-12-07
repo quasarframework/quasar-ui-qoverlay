@@ -19,16 +19,16 @@
       </q-item-section>
     </q-item>
     <q-separator />
-    <q-item clickable tag="a" target="_blank" href="https://github.com/hawkeye64/q-theme-mixin">
+    <q-item clickable tag="a" target="_blank" href="https://github.com/quasarframework/quasar-ui-qoverlay">
       <q-item-section avatar>
         <q-icon name="extension" />
       </q-item-section>
       <q-item-section>
         <q-item-label>QOverlay home</q-item-label>
-        <q-item-label caption>@quasar/quasar-ui-qoverlay</q-item-label>
+        <q-item-label caption>@quasar/qoverlay</q-item-label>
       </q-item-section>
     </q-item>
-    <q-item clickable tag="a" target="_blank" href="https://github.com/quasarframework/app-extension-qmarkdown">
+    <q-item clickable tag="a" target="_blank" href="https://github.com/quasarframework/quasar-ui-qmarkdown">
       <q-item-section avatar>
         <q-icon name="extension" />
       </q-item-section>
@@ -37,6 +37,17 @@
         <q-item-label caption>@quasar/qmarkdown</q-item-label>
       </q-item-section>
     </q-item>
+    <q-item clickable tag="a" target="_blank" href="https://twitter.com/jgalbraith64">
+      <q-item-section avatar>
+        <q-icon name="fab fa-twitter"></q-icon>
+      </q-item-section>
+      <q-item-section>
+        <q-item-label>Jeff's Twitter</q-item-label>
+        <q-item-label caption>@jgalbraith64</q-item-label>
+      </q-item-section>
+    </q-item>
+    <q-separator />
+    <q-item-label header>Quasar</q-item-label>
     <q-separator />
     <q-item clickable tag="a" target="_blank" href="http://quasar.dev">
       <q-item-section avatar>

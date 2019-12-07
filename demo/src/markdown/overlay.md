@@ -1,86 +1,137 @@
-QThemeMixin
+QOverlay
 ===
 
-QThemeMixin is a Vue Mix-in library for components created with Quasar Framework. It is only for components that use a `render` function. It does not work with template formats found with SFC (single file components). This mixin works best in conjunction with the [QColorizeMixin][https://github.com/hawkeye64/q-colorize-mixin] to apply the theme colors.
+**QOverlay** is a component for managing overlays in your Quasar application.
 
 # Features
+- Show fullscreen overlays
+- Show component-level overlays
+- turn off scrollbars
+- Put a component/element on top of the overlay
 
-Allows you to define themes to be used (check out [QCalendar](https://github.com/quasarframework/app-extension-qcalendar)) in conjunction with [QColorizeMixin](https://github.com/hawkeye64/q-colorize-mixin).
+# Installation Types
 
-# Install
-To add this mix-in to your Quasar application, run the following (in your Quasar app folder):
+## Quasar CLI
 
-```bash
-yarn add q-theme-mixin
+**App Extension**
 
-# or
+:::
+#### Install
 
-npm install q-theme-mixin
+To add as an App Extension to your Quasar application, run the following (in your Quasar app folder):
+```
+quasar ext add @quasar/qoverlay
 ```
 
-# Uninstall
-To remove this mix-in from your Quasar application, run the following (in your Quasar app folder):
+#### Uninstall
 
-```bash
-yarn remove q-theme-mixin
-
-# or
-
-npm remove q-theme-mixin
+To remove as an App Extension from your Quasar application, run the following (in your Quasar app folder):
+```
+quasar ext remove @quasar/qoverlay
 ```
 
-# Examples
-Examples with code can be found [here](https://hawkeye64.github.io/q-theme-mixin/examples).
+#### Describe
+When installed as an App Extension, you can use `quasar describe QOverlay`
+:::
 
-# Demo Project (source)
-Source for this application can be found [here](https://github.com/hawkeye64/q-theme-mixin/tree/master/demo).
+**OR**:
 
-# Setup
-```bash
-$ cd ui
-
-$ yarn
-```
-
-# Developing
-```bash
-# start dev in SPA mode
-$ yarn dev
-```
-
-# Building package
-```bash
-$ yarn build
-```
-
-# Building Demo
-```bash
-# first time prep
-$ cd ui
-$ yarn link
-$ cd ../demo
-$ yarn link "q-mixin-mixin"
-
-# for interactive - browser opens automatically
-$ quasar dev
-
-# for build - goes to docs folder
-$ yarn build-demo
-```
-
-# Code Usage
-
-It is important to note that this mixin is intended to be used with Vue **render** functions and not in SFC (single file components). It does not have a render function of its own.
-
-## As a Mixin
+:::
+Create and register a boot file:
 
 ```js
 import Vue from 'vue'
-import { QThemeMixin } from 'q-theme-mixin'
+import Plugin from '@quasar/quasar-ui-qoverlay'
+import '@quasar/quasar-ui-qoverlay/dist/index.css'
 
-export default Vue.extend({
-  name: 'my-component',
-
-  mixins: [QThemeMixin], // <- notice use as a Vue mixin
-...
+Vue.use(Plugin)
 ```
+:::
+
+**OR**:
+
+:::
+```html
+<style src="@quasar/quasar-ui-qoverlay/dist/index.css"></style>
+
+<script>
+import { Component as QOverlay } from '@quasar/quasar-ui-qoverlay'
+
+export default {
+  components: {
+    QOverlay
+  }
+}
+</script>
+```
+:::
+
+## Vue CLI project
+
+:::
+```js
+import Vue from 'vue'
+import Plugin from '@quasar/quasar-ui-qoverlay'
+import '@quasar/quasar-ui-qoverlay/dist/index.css'
+
+Vue.use(Plugin)
+```
+:::
+
+**OR**:
+
+:::
+```html
+<style src="@quasar/quasar-ui-qoverlay/dist/index.css"></style>
+
+<script>
+import { Component as QOverlay } from '@quasar/quasar-ui-qoverlay'
+
+export default {
+  components: {
+    QOverlay
+  }
+}
+</script>
+```
+:::
+
+## UMD variant
+
+Exports `window.QOverlay`.
+
+Add the following tag(s) after the Quasar ones:
+
+:::
+```html
+<head>
+  <!-- AFTER the Quasar stylesheet tags: -->
+  <link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay/dist/index.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <!-- at end of body, AFTER Quasar script(s): -->
+  <script src="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay/dist/index.umd.min.js"></script>
+</body>
+```
+If you need the RTL variant of the CSS, then go for the following (instead of the above stylesheet link):
+```html
+<link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay/dist/index.rtl.min.css" rel="stylesheet" type="text/css">
+```
+:::
+
+## Testing on Codepen (TBD)
+[UMD Example on Codepen](https://codepen.io/Hawkeye64/pen/RwwwKQL)
+
+# Docs
+Can be found [here](https://quasarframework.github.io/quasar-ui-qoverlay).
+
+# Examples
+Can be found [here](https://quasarframework.github.io/quasar-ui-qoverlay/examples).
+
+# Interactive Demo
+Can be found [here](https://quasarframework.github.io/quasar-ui-qoverlay/demo).
+
+# Demo (source) Project
+Can be found [here](https://github.com/quasarframework/quasar-ui-qoverlay/tree/master/demo).
+
+~~~

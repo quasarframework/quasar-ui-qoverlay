@@ -37,6 +37,8 @@ module.exports = function (ctx) {
       components: [
         'QBtn',
         'QCard',
+        'QCardActions',
+        'QCardSection',
         'QCheckbox',
         'QColor',
         'QDrawer',
@@ -58,6 +60,8 @@ module.exports = function (ctx) {
         'QScrollArea',
         'QSelect',
         'QSeparator',
+        'QSpace',
+        'QSpinner',
         'QTab',
         'QTabPanel',
         'QTabPanels',
