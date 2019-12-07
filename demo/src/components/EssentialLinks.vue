@@ -5,7 +5,7 @@
         <q-icon name="bolt" />
       </q-item-section>
       <q-item-section>
-        <q-item-label>QThemeMixin docs</q-item-label>
+        <q-item-label>QOverlay docs</q-item-label>
         <q-item-label caption>Documentation</q-item-label>
       </q-item-section>
     </q-item>
@@ -14,8 +14,8 @@
         <q-icon name="bolt" />
       </q-item-section>
       <q-item-section>
-        <q-item-label>QThemeMixin examples</q-item-label>
-        <q-item-label caption>Examples on how to use the QThemeMixin library</q-item-label>
+        <q-item-label>QOverlay examples</q-item-label>
+        <q-item-label caption>Examples on how to use QOverlay</q-item-label>
       </q-item-section>
     </q-item>
     <q-separator />
@@ -24,8 +24,8 @@
         <q-icon name="extension" />
       </q-item-section>
       <q-item-section>
-        <q-item-label>QThemeMixin home</q-item-label>
-        <q-item-label caption>q-theme-mixin</q-item-label>
+        <q-item-label>QOverlay home</q-item-label>
+        <q-item-label caption>@quasar/quasar-ui-qoverlay</q-item-label>
       </q-item-section>
     </q-item>
     <q-item clickable tag="a" target="_blank" href="https://github.com/quasarframework/app-extension-qmarkdown">

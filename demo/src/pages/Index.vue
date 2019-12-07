@@ -53,7 +53,7 @@ export default {
   methods: {
     onToc (toc) {
       // add the manual ones
-      toc.push({ id: 'QThemeMixin-API', label: 'QThemeMixin API', level: 1, children: Array(0) })
+      toc.push({ id: 'QOverlay-API', label: 'QOverlay API', level: 1, children: Array(0) })
       toc.push({ id: 'Donate', label: 'Donate', level: 1, children: Array(0) })
 
       this.toc = toc
