@@ -11,7 +11,7 @@
     </q-overlay>
 
     <!-- component overlay -->
-    <q-overlay v-model="component">
+    <q-overlay :no-scroll="noScroll" v-model="component">
       <template v-slot:body>
         <div class="absolute fit row justify-center items-center">
           <q-spinner v-if="component && waiting" color="yellow" size="3em"></q-spinner>
@@ -34,7 +34,7 @@
         </q-card-section>
 
         <q-separator dark />
-        <q-checkbox v-model="noScroll" dark label="No scollbars" />
+        <q-checkbox v-model="noScroll" dark label="No scroll" />
         <q-separator dark />
 
         <q-card-actions>
