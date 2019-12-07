@@ -1,10 +1,11 @@
 import { slot } from 'quasar/src/utils/slot.js'
 import ModelToggleMixin from 'quasar/src/mixins/model-toggle.js'
+import PreventScrollMixin from 'quasar/src/mixins/prevent-scroll.js'
 
 export default {
   name: 'QOverlay',
 
-  mixins: [ ModelToggleMixin ],
+  mixins: [ModelToggleMixin, PreventScrollMixin],
 
   props: {
     opacity: {
@@ -36,21 +37,12 @@ export default {
       defSlot = slot(this, 'default'),
       isFullscreen = defSlot === void 0
 
-    if (isFullscreen === true) {
-      if (this.noScroll === true) {
-        if (this.value === true) {
-          document.body.classList.add('no-scroll')
-        } else {
-          document.body.classList.remove('no-scroll')
-        }
-      }
-    }
+    this.__preventScroll(this.noScroll === true && this.value === true)
 
     if (this.value === true) {
       const overlay = h('div', {
         class: `cursor-${this.cursorType}` +
-          (isFullscreen === true ? ' fixed fullscreen' : ' absolute fit') +
-          (isFullscreen !== true && this.noScroll === true ? ' no-scroll' : ''),
+          (isFullscreen === true ? ' fixed fullscreen' : ' absolute fit'),
         style: this.styles
       }, slot(this, 'body'))
 
