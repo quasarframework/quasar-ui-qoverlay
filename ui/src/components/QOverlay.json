@@ -21,7 +21,7 @@
       "type": [ "Number", "String" ],
       "category": "behavior",
       "desc": "Used to change the z-index of the overlay",
-      "default": "200",
+      "default": "6000",
       "examples": [ "5000" ]
     },
     "cursor-type": {
