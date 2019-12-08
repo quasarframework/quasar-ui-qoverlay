@@ -1,7 +1,7 @@
 <template>
   <div class="q-pa-md row items-start q-gutter-md">
     <!-- fullscreen overlay -->
-    <q-overlay v-model="fullscreen" :no-scroll="noScroll" z-index="5000">
+    <q-overlay v-model="fullscreen" :no-scroll="noScroll" :z-index="5000">
       <template v-slot:body>
         <div class="fullscreen row justify-center items-center">
           <q-spinner v-if="fullscreen && waiting" color="yellow" size="3em"></q-spinner>
