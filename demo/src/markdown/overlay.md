@@ -119,8 +119,8 @@ If you need the RTL variant of the CSS, then go for the following (instead of th
 ```
 :::
 
-## Testing on Codepen (TBD)
-[UMD Example on Codepen](https://codepen.io/Hawkeye64/pen/RwwwKQL)
+## Testing on Codepen
+[UMD Example on Codepen](https://codepen.io/Hawkeye64/pen/wvBKVNB)
 
 # Docs
 Can be found [here](https://quasarframework.github.io/quasar-ui-qoverlay).
