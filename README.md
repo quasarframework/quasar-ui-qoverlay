@@ -1,8 +1,5 @@
 QOverlay (Vue Plugin, UMD and Quasar App Extension)
 
-<img src="https://img.shields.io/npm/v/@quasar/quasar-ui-qoverlay.svg?label=@quasar/quasar-ui-qoverlay">
-<img src="https://img.shields.io/npm/v/@quasar/quasar-app-extension-qoverlay.svg?label=@quasar/quasar-app-extension-qoverlay">
-
 ![@quasar/quasar-ui-qoverlay](https://img.shields.io/npm/v/@quasar/quasar-ui-qoverlay.svg?label=@quasar/quasar-ui-qoverlay)
 ![@quasar/quasar-app-extension-qoverlay](https://img.shields.io/npm/v/@quasar/quasar-app-extension-qoverlay.svg?label=@quasar/quasar-app-extension-qoverlay)
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/quasarframework/quasar-ui-qoverlay.svg)]()
