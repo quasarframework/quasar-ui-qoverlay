@@ -14,7 +14,7 @@ export default {
     },
     zIndex: {
       type: [Number, String],
-      default: 200
+      default: 6000
     },
     cursorType: {
       type: String,
@@ -37,27 +37,44 @@ export default {
   render (h) {
     const
       defSlot = slot(this, 'default'),
+      bodySlot = slot(this, 'body'),
       isFullscreen = defSlot === void 0
 
     this.__preventScroll(this.noScroll === true && this.value === true)
 
     if (this.value === true) {
-      const overlay = h('div', {
-        class: `cursor-${this.cursorType}` +
-          (isFullscreen === true ? ' fixed fullscreen' : ' absolute fit'),
-        style: this.styles
-      }, slot(this, 'body'))
-
-      return h('div', {
-        staticClass: 'relative',
-        style: {
-          position: 'relative'
-        }
-      }, [overlay].concat(defSlot))
-    } else if (defSlot !== void 0) {
-      return h('div', {
-        staticClass: ''
-      }, defSlot)
+      if (isFullscreen === true) {
+        return h('div', {
+          staticClass: 'q-overlay fixed fullscreen',
+          class: `cursor-${this.cursorType}`,
+          style: this.styles
+        }, bodySlot)
+      }
     }
+
+    if (this.value !== true) {
+      if (isFullscreen === true) {
+        // nothing to draw when fullscreen and not displaying
+        return void 0
+      }
+    }
+
+    if (this.value === true) {
+      if (isFullscreen !== true) {
+        const overlay = h('div', {
+          staticClass: 'q-overlay q-overlay--component',
+          class: `cursor-${this.cursorType}`,
+          style: this.styles
+        }, bodySlot)
+
+        return h('div', {
+          staticClass: 'q-overlay--wrapper'
+        }, [overlay].concat(defSlot))
+      }
+    }
+
+    return h('div', {
+      staticClass: 'q-overlay'
+    }, defSlot)
   }
 }
