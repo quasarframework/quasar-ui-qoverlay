@@ -2,15 +2,13 @@
   <hero>
     <div class="q-markdown">
       <q-markdown>
-In the examples below, QThemeMixin is dependent on the [QColorizeMixin](https://github.com/hawkeye64/q-colorize-mixin) to apply the actual colors.
+The examples below use a timer to switch states while the overlay is being displayed. When the timer expires, a button is displayed that allows you to turn off the overlay.
+
+Try out both Fullscreen and Component overlays with and without scrollbar support.
       </q-markdown>
       <example-title title="QOverlay Basic" />
       <example-card title="Fullscreen" name="Basic" :tag-parts="getTagParts(require('!!raw-loader!../examples/Basic.vue').default)" />
       <example-card title="On Component" name="OnComponent" :tag-parts="getTagParts(require('!!raw-loader!../examples/OnComponent.vue').default)" />
-
-      <!-- <example-title title="Theme Advanced" />
-      <example-card title="Theme Selection" name="ThemeSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ThemeSelection.vue').default)" />
-      <example-card title="Theme Quasar Components" name="ThemeQuasarComponents" :tag-parts="getTagParts(require('!!raw-loader!../examples/ThemeQuasarComponents.vue').default)" /> -->
 
     </div>
   </hero>

@@ -6,7 +6,7 @@ QOverlay
 # Features
 - Show fullscreen overlays
 - Show component-level overlays
-- turn off scrollbars
+- Turn off scrollbars
 - Put a component/element on top of the overlay
 
 # Installation Types

@@ -24,11 +24,10 @@
         </q-card-section>
 
         <q-separator dark />
-        <q-checkbox v-model="noScroll" dark label="No scroll" />
-        <q-separator dark />
 
-        <q-card-actions>
-          <q-btn flat @click="model = !model">Component</q-btn>
+        <q-card-actions class="justify-around">
+          <q-checkbox v-model="noScroll" dark label="No scroll" />
+          <q-btn flat @click="model = !model">Component Overlay</q-btn>
         </q-card-actions>
       </q-card>
     </q-overlay>
