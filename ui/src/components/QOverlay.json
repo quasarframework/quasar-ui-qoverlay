@@ -1,0 +1,49 @@
+{
+  "mixins": [ "~quasar/src/mixins/model-toggle" ],
+
+  "meta": {
+    "docsUrl": "https://quasarframework.github.io/quasar-ui-qoverlay/docs"
+  },
+
+  "props": {
+    "value": {
+      "type": "Boolean",
+      "desc": "Use v-model to control active state"
+    },
+    "opacity": {
+      "type": [ "Number", "String" ],
+      "category": "behavior",
+      "desc": "Used to change the opacity of the overlay",
+      "default": "0.35",
+      "examples": ["0.50"]
+    },
+    "z-index": {
+      "type": [ "Number", "String" ],
+      "category": "behavior",
+      "desc": "Used to change the z-index of the overlay",
+      "default": "6000",
+      "examples": [ "5000" ]
+    },
+    "cursor-type": {
+      "type": "String",
+      "category": "behavior",
+      "desc": "Used to change the cursor type of the overlay. Any valid cursor type is allowed except for `url`",
+      "default": "not-allowed",
+      "examples": [ "pointer", "wait" ]
+    },
+    "no-scroll": {
+      "type": "Boolean",
+      "category": "behavior",
+      "addedIn": "v1.0.0",
+      "desc": "Used to turn off scrollbars"
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "Anything can go into this slot"
+    },
+    "body": {
+      "desc": "Anything using the body slot will be placed above the overlay"
+    }
+  }
+}

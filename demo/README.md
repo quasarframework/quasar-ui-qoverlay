@@ -1,7 +1,4 @@
-Quasar App Extension QOverlay Demo
-===
-This is the repository that tests the [QOverlay](https://github.com/quasarframework/app-extension-qoverlay), which is a Quasar App Extension.
+# Quasar App (demo)
 
-Download or clone this repo to see how the effects are done.
+A Quasar Framework app
 
-[Demo site](https://qoverlay.netlify.com/#/)

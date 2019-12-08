@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width">
+
+    <title>UMD test</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/quasar@^1.0.0/dist/quasar.min.css" rel="stylesheet" type="text/css">
+    <link href="dist/index.css" rel="stylesheet" type="text/css">
+    <style>
+ body {
+   min-height: 2000px;
+ }
+.my-card {
+  width: 100%;
+  max-width: 350px;
+}
+    </style>
+  </head>
+  <body>
+    <div id="q-app">
+      <q-layout view="lHh Lpr fff">
+        <q-header class="glossy bg-primary">
+          <q-toolbar>
+            <q-toolbar-title>
+              QOverlay v{{ version }}
+            </q-toolbar-title>
+
+            <div>Quasar v{{ $q.version }}</div>
+          </q-toolbar>
+        </q-header>
+
+        <q-page-container>
+          <q-page padding>
+            <div class="q-pa-md row items-start q-gutter-md">
+
+              <!-- fullscreen overlay -->
+              <q-overlay v-model="fullscreen" :no-scroll="noScroll" z-index="5000">
+                <template v-slot:body>
+                  <div class="fullscreen row justify-center items-center">
+                    <q-spinner v-if="fullscreen && waiting" color="yellow" size="3em"></q-spinner>
+                    <q-btn v-if="fullscreen && !waiting" color="primary" label="Exit" @click="fullscreen = !fullscreen"></q-btn>
+                  </div>
+                </template>
+              </q-overlay>
+
+              <!-- component overlay -->
+              <q-overlay :no-scroll="noScroll" v-model="component">
+                <template v-slot:body>
+                  <div class="absolute fit row justify-center items-center">
+                    <q-spinner v-if="component && waiting" color="yellow" size="3em"></q-spinner>
+                    <q-btn v-if="component && !waiting" color="primary" label="Exit" @click="component = !component"></q-btn>
+                  </div>
+                </template>
+                <q-card class="my-card bg-secondary text-white">
+                  <q-card-section>
+                    <div class="text-h5">QOverlay</div>
+                    <div class="text-subtitle2">Put a standard overlay on full screen or over a component.</div>
+                  </q-card-section>
+
+                  <q-card-section>
+                    <div class="text-h6">Fullscreen mode</div>
+                    <div class="text-body2">For fullscreen overlay mode, the <i>q-overlay</i> tag can be placed anywhere in a template and should have no default slot used. The overlay will cover all scrollable area (try scrolling this page after entering Fullscreen mode). But, if the <strong>body</strong> slot is used, this will be available on the visible view port.</div>
+                  </q-card-section>
+                  <q-card-section>
+                    <div class="text-h6">Component mode</div>
+                    <div class="text-body2">For component overlay mode, the <i>q-overlay</i> tag is used to wrap a component. The overlay will cover the contained component.</div>
+                  </q-card-section>
+
+                  <q-separator dark></q-separator>
+                  <q-checkbox v-model="noScroll" dark label="No scroll"></q-checkbox>
+                  <q-separator dark></q-separator>
+
+                  <q-card-actions>
+                    <q-btn flat @click="fullscreen = !fullscreen">Fullscreen</q-btn>
+                    <q-btn flat @click="component = !component">Component</q-btn>
+                  </q-card-actions>
+                </q-card>
+              </q-overlay>
+
+              <ul class="q-mb-lg">
+                <li>In /ui, run: "yarn build"</li>
+                <li class="text-red">You need to build & refresh page on each change manually.</li>
+                <li>Use self-closing tags only!</li>
+                <li>Example: &lt;my-component&gt;&lt;/my-component&gt;</li>
+              </ul>
+            </div>
+          </q-page>
+        </q-page-container>
+      </q-layout>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/quasar@^1.0.0/dist/quasar.ie.polyfills.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@^2.0.0/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quasar@^1.0.0/dist/quasar.umd.min.js"></script>
+    <script src="dist/index.umd.js"></script>
+
+    <script>
+      new Vue({
+        el: '#q-app',
+
+        data: function () {
+          return {
+            version: QOverlay.version,
+            fullscreen: false,
+            component: false,
+            waiting: false,
+            timerId: null,
+            noScroll: false
+          }
+        },
+        beforeDestroy () {
+          clearTimeout(this.timerId)
+        },
+        watch: {
+          fullscreen (val) {
+            clearTimeout(this.timerId)
+            if (val) {
+              this.waiting = true
+              this.timerId = setTimeout(() => {
+                this.waiting = false
+              }, 2000)
+            } else {
+              this.waiting = false
+            }
+          },
+          component (val) {
+            clearTimeout(this.timerId)
+            if (val) {
+              this.waiting = true
+              this.timerId = setTimeout(() => {
+                this.waiting = false
+              }, 2000)
+            } else {
+              this.waiting = false
+            }
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
