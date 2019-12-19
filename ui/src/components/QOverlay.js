@@ -34,6 +34,13 @@ export default {
     }
   },
 
+  beforeDestroy () {
+    // make sure noScroll is not left in unintended state
+    if (this.noScroll === true && this.value === true) {
+      this.__preventScroll(false)
+    }
+  },
+
   render (h) {
     const
       defSlot = slot(this, 'default'),
