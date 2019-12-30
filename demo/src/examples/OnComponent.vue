@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pa-md row justify-around">
+  <div class="q-pa-md row justify-around" style="max-width: 700px; width: 100%;">
 
     <q-overlay :no-scroll="noScroll" v-model="model">
       <template v-slot:body>
@@ -8,6 +8,7 @@
           <q-btn v-if="model === true && waiting !== true" color="primary" label="Exit" @click="model = !model" />
         </div>
       </template>
+
       <q-card :class="'my-card ' + ($q.dark.isActive !== true ? 'bg-secondary text-white' : '')" >
         <q-card-section>
           <div class="text-h5">QOverlay</div>
