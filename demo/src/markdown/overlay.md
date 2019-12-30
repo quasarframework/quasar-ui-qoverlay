@@ -55,7 +55,7 @@ Vue.use(Plugin)
 <style src="@quasar/quasar-ui-qoverlay/dist/index.css"></style>
 
 <script>
-import { Component as QOverlay } from '@quasar/quasar-ui-qoverlay'
+import { QOverlay } from '@quasar/quasar-ui-qoverlay'
 
 export default {
   components: {
@@ -85,7 +85,7 @@ Vue.use(Plugin)
 <style src="@quasar/quasar-ui-qoverlay/dist/index.css"></style>
 
 <script>
-import { Component as QOverlay } from '@quasar/quasar-ui-qoverlay'
+import { QOverlay } from '@quasar/quasar-ui-qoverlay'
 
 export default {
   components: {
@@ -127,9 +127,6 @@ Can be found [here](https://quasarframework.github.io/quasar-ui-qoverlay).
 
 # Examples
 Can be found [here](https://quasarframework.github.io/quasar-ui-qoverlay/examples).
-
-# Interactive Demo
-Can be found [here](https://quasarframework.github.io/quasar-ui-qoverlay/demo).
 
 # Demo (source) Project
 Can be found [here](https://github.com/quasarframework/quasar-ui-qoverlay/tree/master/demo).
