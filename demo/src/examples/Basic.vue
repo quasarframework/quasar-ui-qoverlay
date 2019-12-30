@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pa-md row justify-around q-gutter-md">
+  <div class="q-pa-md row justify-around" style="max-width: 700px; width: 100%;">
     <q-checkbox v-model="noScroll" label="No scroll" />
     <q-btn label="Fullscreen Overlay" @click="model = true"></q-btn>
 

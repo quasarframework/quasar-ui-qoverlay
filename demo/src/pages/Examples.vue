@@ -6,9 +6,9 @@ The examples below use a timer to switch states while the overlay is being displ
 
 Try out both Fullscreen and Component overlays with and without scrollbar support.
       </q-markdown>
-      <example-title title="QOverlay Basic" />
-      <example-card title="Fullscreen" name="Basic" :tag-parts="getTagParts(require('!!raw-loader!../examples/Basic.vue').default)" />
-      <example-card title="On Component" name="OnComponent" :tag-parts="getTagParts(require('!!raw-loader!../examples/OnComponent.vue').default)" />
+      <example-title title="QOverlay" />
+      <example-viewer title="Fullscreen" file="Basic" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="On Component" file="OnComponent" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
 
     </div>
   </hero>
@@ -17,29 +17,34 @@ Try out both Fullscreen and Component overlays with and without scrollbar suppor
 <script>
 import Hero from '../components/Hero'
 import ExampleTitle from '../components/ExampleTitle'
-import ExampleCard from '../components/ExampleCard'
 import { slugify } from '../utils/page-utils'
-import { getTagParts } from '@quasar/quasar-ui-qmarkdown'
+import { version } from 'ui'
 
 export default {
   name: 'Examples',
 
   components: {
     Hero,
-    ExampleTitle,
-    ExampleCard
+    ExampleTitle
   },
 
   data () {
     return {
-      tempToc: []
+      tempToc: [],
+      locationUrl: 'https://github.com/quasarframework/quasar-ui-qoverlay/tree/dev/demo/src/examples/',
+      jsPaths: [
+        `https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay@${version}/dist/index.umd.min.js`
+      ],
+      cssPaths: [
+        `https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay@${version}/dist/index.min.css`
+      ]
     }
   },
 
   mounted () {
     this.toc = []
     this.tempToc = []
-    this.addToToc('QOverlay Basic')
+    this.addToToc('QOverlay')
     this.addToToc('Fullscreen', 2)
     this.addToToc('On Component', 2)
     // this.addToToc('Theme Selection', 2)
@@ -61,9 +66,12 @@ export default {
   },
 
   methods: {
-    getTagParts,
     addToToc (name, level = 1) {
-      const slug = slugify(name)
+      let n = name
+      if (level > 1) {
+        n = 'example-' + n
+      }
+      const slug = slugify(n)
       this.tempToc.push({
         children: [],
         id: slug,

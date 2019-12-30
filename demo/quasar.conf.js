@@ -8,7 +8,6 @@ module.exports = function (ctx) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     boot: [
-      'components',
       'qoverlay'
     ],
 
@@ -109,7 +108,8 @@ module.exports = function (ctx) {
         chain.resolve.alias.merge({
           'ui': path.resolve(__dirname, '../ui/src/index.js'),
           '@quasar/quasar-ui-qoverlay': path.resolve(__dirname, '../ui'),
-          'sass': path.resolve(__dirname, '../ui/src/index.sass')
+          'sass': path.resolve(__dirname, '../ui/src/index.sass'),
+          'examples': path.resolve(__dirname, './src/examples')
         })
       }
     },
