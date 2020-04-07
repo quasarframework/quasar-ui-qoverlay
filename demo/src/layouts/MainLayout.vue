@@ -36,6 +36,7 @@
 
     <q-drawer
       v-model="leftDrawerOpen"
+      show-if-above
       bordered
       aria-label="Menu"
       class="menu"
@@ -49,6 +50,7 @@
 
     <q-drawer
       v-model="rightDrawerOpen"
+      show-if-above
       side="right"
       bordered
       aria-label="Table of Contents"
@@ -163,6 +165,3 @@ export default {
   }
 }
 </script>
-
-<style>
-</style>
