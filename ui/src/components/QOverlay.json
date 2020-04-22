@@ -17,6 +17,13 @@
       "default": "0.35",
       "examples": ["0.50"]
     },
+    "background-color": {
+      "type": "String",
+      "category": "behavior",
+      "desc": "Used to change the background color of the overlay. Removes alpha channel to use opacity property.",
+      "default": "#000000",
+      "examples": ["#FFF", "rgba(255, 0, 255, 0.5)"]
+    },
     "z-index": {
       "type": [ "Number", "String" ],
       "category": "behavior",
