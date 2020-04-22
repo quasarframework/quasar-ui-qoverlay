@@ -1,7 +1,7 @@
-import {slot} from 'quasar/src/utils/slot.js'
+import { slot } from 'quasar/src/utils/slot.js'
 import ModelToggleMixin from 'quasar/src/mixins/model-toggle.js'
 import PreventScrollMixin from 'quasar/src/mixins/prevent-scroll.js'
-import {textToRgb} from "quasar/src/utils/colors";
+import { textToRgb } from "quasar/src/utils/colors";
 
 export default {
   name: 'QOverlay',
@@ -29,7 +29,7 @@ export default {
   },
 
   computed: {
-    styles() {
+    styles () {
       const rgb = textToRgb(this.backgroundColor);
       return {
         zIndex: this.zIndex,
@@ -40,14 +40,14 @@ export default {
     }
   },
 
-  beforeDestroy() {
+  beforeDestroy () {
     // make sure noScroll is not left in unintended state
     if (this.noScroll === true && this.value === true) {
       this.__preventScroll(false)
     }
   },
 
-  render(h) {
+  render (h) {
     const
       defSlot = slot(this, 'default'),
       bodySlot = slot(this, 'body'),
