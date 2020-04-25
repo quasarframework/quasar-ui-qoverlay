@@ -11,7 +11,7 @@
     </q-overlay>
 
     <!-- component overlay -->
-    <q-overlay :no-scroll="noScroll" v-model="component">
+    <q-overlay :no-scroll="noScroll" v-model="component" :background-color="whiteBackground ? '#FFF' : '#000'">
       <template v-slot:body>
         <div class="absolute fit row justify-center items-center">
           <q-spinner v-if="component && waiting" color="yellow" size="3em"></q-spinner>
@@ -35,6 +35,7 @@
 
         <q-separator dark />
         <q-checkbox v-model="noScroll" dark label="No scroll" />
+        <q-checkbox v-model="whiteBackground" dark label="White Background" />
         <q-separator dark />
 
         <q-card-actions>
@@ -58,7 +59,8 @@ export default {
       component: false,
       waiting: false,
       timerId: null,
-      noScroll: false
+      noScroll: false,
+      whiteBackground: false,
     }
   },
   watch: {
