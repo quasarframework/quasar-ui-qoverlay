@@ -8,6 +8,7 @@ Try out both Fullscreen and Component overlays with and without scrollbar suppor
       </q-markdown>
       <example-title title="QOverlay" />
       <example-viewer title="Fullscreen" file="Basic" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Background Color" file="BackgroundColor" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
       <example-viewer title="On Component" file="OnComponent" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
 
     </div>
@@ -46,9 +47,8 @@ export default {
     this.tempToc = []
     this.addToToc('QOverlay')
     this.addToToc('Fullscreen', 2)
+    this.addToToc('Background Color', 2)
     this.addToToc('On Component', 2)
-    // this.addToToc('Theme Selection', 2)
-    // this.addToToc('Theme Quasar Components', 2)
 
     this.toc = this.tempToc
   },
