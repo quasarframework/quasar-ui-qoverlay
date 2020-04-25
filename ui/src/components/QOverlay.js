@@ -1,7 +1,7 @@
 import { slot } from 'quasar/src/utils/slot.js'
 import ModelToggleMixin from 'quasar/src/mixins/model-toggle.js'
 import PreventScrollMixin from 'quasar/src/mixins/prevent-scroll.js'
-import { textToRgb } from "quasar/src/utils/colors";
+import { textToRgb } from 'quasar/src/utils/colors'
 
 export default {
   name: 'QOverlay',
@@ -30,10 +30,10 @@ export default {
 
   computed: {
     styles () {
-      const rgb = textToRgb(this.backgroundColor);
+      const rgb = textToRgb(this.backgroundColor)
       return {
         zIndex: this.zIndex,
-        backgroundColor: `rgba(${rgb.r}, ${rgb.g},${rgb.b},${this.opacity})`,
+        backgroundColor: `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${this.opacity})`,
         padding: 0,
         margin: 0
       }

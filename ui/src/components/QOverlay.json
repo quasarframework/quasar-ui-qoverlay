@@ -21,6 +21,7 @@
       "type": "String",
       "category": "behavior",
       "desc": "Used to change the background color of the overlay. Removes alpha channel to use opacity property.",
+      "addedIn": "v1.0.3",
       "default": "#000000",
       "examples": ["#FFF", "rgba(255, 0, 255, 0.5)"]
     },
