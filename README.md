@@ -7,7 +7,8 @@ QOverlay (Vue Plugin, UMD and Quasar App Extension)
 
 
 # Structure
-* [/ui](ui) - standalone npm package
+
+* [/ui](ui) - standalone npm package (go here for more information)
 * [/app-extension](app-extension) - Quasar app extension
 * [/demo](demo) - docs, demo and examples project
 * [live demo](https://quasarframework.github.io/quasar-ui-qoverlay/docs) - live docs, demo and examples
