@@ -1,4 +1,5 @@
-# QOverlay
+QOverlay
+===
 
 [![npm](https://img.shields.io/npm/v/@quasar/quasar-ui-qoverlay.svg?label=@quasar/quasar-ui-qoverlay)](https://www.npmjs.com/package/@quasar/quasar-ui-qoverlay)
 [![npm](https://img.shields.io/npm/dt/@quasar/quasar-ui-qoverlay.svg)](https://www.npmjs.com/package/@quasar/quasar-ui-qoverlay)

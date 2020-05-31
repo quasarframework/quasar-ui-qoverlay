@@ -17,5 +17,16 @@ yarn-error.log*
 *.njsproj
 *.sln
 .editorconfig
+
+# Linters
 .eslintignore
 .eslintrc.js
+.babelrc
+
+# Other
+/src/components/QOverlay.json
+
+# Testing
+/test
+.env.jest
+jest.config.js
