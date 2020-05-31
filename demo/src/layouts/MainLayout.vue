@@ -49,6 +49,7 @@
     </q-drawer>
 
     <q-drawer
+      ref="drawer"
       v-model="rightDrawerOpen"
       show-if-above
       side="right"
@@ -78,7 +79,9 @@
     </q-drawer>
 
     <q-page-container>
+      <transition name="fade">
       <router-view />
+      </transition>
     </q-page-container>
   </q-layout>
 </template>
