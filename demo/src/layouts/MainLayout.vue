@@ -6,11 +6,10 @@
           flat
           dense
           round
+          icon="menu"
           @click="leftDrawerOpen = !leftDrawerOpen"
           aria-label="Menu"
-        >
-          <q-icon name="menu" />
-        </q-btn>
+        />
 
         <q-toolbar-title>
           QOverlay <span class="text-subtitle2">v{{ version }}</span>
@@ -68,8 +67,7 @@
             @click="scrollTo(item.id)"
             :active="activeToc === item.id"
           >
-          <q-item-section v-if="item.level === 2" side>&nbsp;&nbsp;• </q-item-section>
-          <q-item-section v-else-if="item.level > 2" side>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• </q-item-section>
+          <q-item-section v-if="item.level > 1" side> • </q-item-section>
             <q-item-section
               :class="`toc-item toc-level-${item.level}`"
             >{{ item.label }}</q-item-section>
