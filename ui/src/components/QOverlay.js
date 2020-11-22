@@ -29,7 +29,7 @@ export default {
   },
 
   computed: {
-    styles () {
+    __styles () {
       const rgb = textToRgb(this.backgroundColor)
       return {
         zIndex: this.zIndex,
@@ -60,7 +60,7 @@ export default {
         return h('div', {
           staticClass: 'q-overlay fixed fullscreen',
           class: `cursor-${this.cursorType}`,
-          style: this.styles
+          style: this.__styles
         }, bodySlot)
       }
     }
@@ -77,7 +77,7 @@ export default {
         const overlay = h('div', {
           staticClass: 'q-overlay q-overlay--component',
           class: `cursor-${this.cursorType}`,
-          style: this.styles
+          style: this.__styles
         }, bodySlot)
 
         return h('div', {

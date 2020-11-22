@@ -1,5 +1,5 @@
 <template>
-  <q-list>
+  <q-list class="menu">
     <q-item clickable to="/docs">
       <q-item-section avatar>
         <q-icon name="bolt" />
@@ -21,7 +21,7 @@
     <q-separator />
     <q-item clickable tag="a" target="_blank" href="https://github.com/quasarframework/quasar-ui-qoverlay">
       <q-item-section avatar>
-        <q-icon name="extension" />
+        <q-icon name="home" />
       </q-item-section>
       <q-item-section>
         <q-item-label>QOverlay home</q-item-label>

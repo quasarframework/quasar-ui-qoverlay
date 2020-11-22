@@ -8,6 +8,7 @@
 /* eslint-env node */
 
 const path = require('path')
+const ESLintPlugin = require('eslint-webpack-plugin')
 
 module.exports = function (/* ctx */) {
   return {
@@ -32,7 +33,7 @@ module.exports = function (/* ctx */) {
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
       // 'ionicons-v4',
-      // 'mdi-v3',
+      // 'mdi-v5',
       'fontawesome-v5',
       // 'eva-icons',
       // 'themify',
@@ -66,12 +67,10 @@ module.exports = function (/* ctx */) {
 
       // https://quasar.dev/quasar-cli/handling-webpack
       extendWebpack (cfg) {
-        cfg.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /node_modules/
-        })
+        cfg.plugins.push(new ESLintPlugin({
+          files: './src',
+          extensions: ['js', 'vue']
+        }))
       },
 
       chainWebpack (chain) {
@@ -174,7 +173,7 @@ module.exports = function (/* ctx */) {
     // Full list of options: https://quasar.dev/quasar-cli/developing-capacitor-apps/configuring-capacitor
     capacitor: {
       hideSplashscreen: true
-      },
+    },
 
     // Full list of options: https://quasar.dev/quasar-cli/developing-electron-apps/configuring-electron
     electron: {
