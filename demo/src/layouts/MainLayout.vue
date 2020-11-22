@@ -78,7 +78,7 @@
 
     <q-page-container>
       <transition name="fade">
-      <router-view />
+        <router-view />
       </transition>
     </q-page-container>
   </q-layout>
@@ -152,14 +152,14 @@ export default {
         }
 
         if (item.offsetTop >= position + 50) {
-          if (last === void 0) {
+          if (last === undefined) {
             last = section.id
           }
           break
         }
       }
 
-      if (last !== void 0) {
+      if (last !== undefined) {
         this.activeToc = last
       }
     }
