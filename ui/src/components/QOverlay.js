@@ -1,13 +1,9 @@
-import { slot } from 'quasar/src/utils/slot.js'
-import ModelToggleMixin from 'quasar/src/mixins/model-toggle.js'
-import PreventScrollMixin from 'quasar/src/mixins/prevent-scroll.js'
+import { h, defineComponent, onBeforeUnmount } from 'vue'
+import preventScroll from 'quasar/src/utils/prevent-scroll'
 import { textToRgb } from 'quasar/src/utils/colors'
 
-export default {
+export default defineComponent({
   name: 'QOverlay',
-
-  mixins: [ModelToggleMixin, PreventScrollMixin],
-
   props: {
     backgroundColor: {
       type: String,
@@ -25,69 +21,97 @@ export default {
       type: String,
       default: 'not-allowed'
     },
-    noScroll: Boolean
+    id: String,
+    noScroll: Boolean,
+    modelValue: Boolean
   },
+  setup (props, { slots }) {
+    onBeforeUnmount(() => {
+      // make sure noScroll is not left in unintended state
+      if (props.noScroll && props.modelValue) {
+        preventScroll(false)
+      }
+    })
 
-  computed: {
-    __styles () {
-      const rgb = textToRgb(this.backgroundColor)
+    /**
+     * Overlay style
+     *
+     * @return {{padding: number, backgroundColor: string, margin: number, zIndex: (Number|String)}}
+     */
+    function style () {
+      const rgb = textToRgb(props.backgroundColor)
       return {
-        zIndex: this.zIndex,
-        backgroundColor: `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${this.opacity})`,
+        zIndex: props.zIndex,
+        backgroundColor: `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${props.opacity})`,
         padding: 0,
         margin: 0
       }
     }
-  },
 
-  beforeDestroy () {
-    // make sure noScroll is not left in unintended state
-    if (this.noScroll === true && this.value === true) {
-      this.__preventScroll(false)
-    }
-  },
+    /**
+     * Renders component with overlay.
+     *
+     * @param slot default slot
+     * @return h component overlay render function
+     * @private
+     */
+    function __renderComponent (slot) {
+      const overlay = h('div', {
+        class: `q-overlay q-overlay--component cursor-${props.cursorType}`,
+        style: style()
+      }, slots.body())
 
-  render (h) {
-    const
-      defSlot = slot(this, 'default'),
-      bodySlot = slot(this, 'body'),
-      isFullscreen = defSlot === void 0
-
-    this.__preventScroll(this.noScroll === true && this.value === true)
-
-    if (this.value === true) {
-      if (isFullscreen === true) {
-        return h('div', {
-          staticClass: 'q-overlay fixed fullscreen',
-          class: `cursor-${this.cursorType}`,
-          style: this.__styles
-        }, bodySlot)
-      }
+      return h('div', {
+        class: 'q-overlay--wrapper'
+      }, [overlay, (slot && slot())])
     }
 
-    if (this.value !== true) {
-      if (isFullscreen === true) {
-        // nothing to draw when fullscreen and not displaying
+    /**
+     * Renders fullscreen overlay.
+     *
+     * @return h fullscreen overlay render function
+     * @private
+     */
+    function __renderFullscreen () {
+      return h('div', {
+        class: `q-overlay fixed fullscreen cursor-${props.cursorType}`,
+        style: style()
+      }, [slots.body()])
+    }
+
+    /**
+     * Renders fullscreen overlay or component overlay
+     *
+     * @return h overlay
+     * @private
+     */
+    function __renderOverlay () {
+      const slot = slots.default
+      const isFullscreen = (slot && slot()) === void 0
+
+      // nothing to draw when fullscreen and not displaying
+      if (!props.modelValue && isFullscreen) {
         return void 0
       }
-    }
 
-    if (this.value === true) {
-      if (isFullscreen !== true) {
-        const overlay = h('div', {
-          staticClass: 'q-overlay q-overlay--component',
-          class: `cursor-${this.cursorType}`,
-          style: this.__styles
-        }, bodySlot)
+      console.log(`No-Scroll: ${props.noScroll}`)
+      console.log(`Model: ${props.modelValue}`)
+      console.log(`Id: ${props.id}`)
+      preventScroll(props.noScroll && props.modelValue)
 
-        return h('div', {
-          staticClass: 'q-overlay--wrapper'
-        }, [overlay].concat(defSlot))
+      if (props.modelValue && isFullscreen) {
+        return __renderFullscreen()
       }
+
+      if (props.modelValue && !isFullscreen) {
+        return __renderComponent(slot)
+      }
+
+      return h('div', {
+        class: 'q-overlay'
+      }, (slot && slot()) || [])
     }
 
-    return h('div', {
-      staticClass: 'q-overlay'
-    }, defSlot)
+    return () => __renderOverlay()
   }
-}
+})

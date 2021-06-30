@@ -8,6 +8,8 @@
 
 /* eslint-env node */
 /* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path')
+const ESLintPlugin = require('eslint-webpack-plugin')
 const { configure } = require('quasar/wrappers')
 
 module.exports = configure(function (ctx) {
@@ -29,6 +31,7 @@ module.exports = configure(function (ctx) {
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli/boot-files
     boot: [
+      'register.js'
     ],
 
     // https://v2.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
@@ -72,8 +75,14 @@ module.exports = configure(function (ctx) {
 
       // https://v2.quasar.dev/quasar-cli/handling-webpack
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
-      chainWebpack (/* chain */) {
-        //
+      chainWebpack (chain) {
+        chain.plugin('eslint-webpack-plugin')
+          .use(ESLintPlugin, [{ extensions: ['js', 'vue'] }])
+
+        chain.resolve.alias.merge({
+          ui: path.resolve(__dirname, '../src/index.js'),
+          '@quasar/quasar-ui-qoverlay': path.resolve(__dirname, '../src')
+        })
       }
     },
 
