@@ -6,7 +6,7 @@
   },
 
   "props": {
-    "value": {
+    "model-value": {
       "type": "Boolean",
       "desc": "Use v-model to control active state"
     },
