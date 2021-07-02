@@ -1,7 +1,7 @@
 <template>
   <q-page class="row items-center justify-evenly">
 
-    <q-overlay v-model="fullscreen" :id="'full'" :background-color="backgroundColor">
+    <q-overlay v-model="fullscreen" :background-color="backgroundColor">
       <template v-slot:body>
         <div class="fullscreen row justify-center items-center">
           <q-spinner v-if="fullscreen && waiting" color="yellow" size="3em"></q-spinner>
@@ -10,7 +10,7 @@
       </template>
     </q-overlay>
 
-    <q-overlay :no-scroll="noScroll" :id="'component'" v-model="component" :background-color="backgroundColor">
+    <q-overlay :no-scroll="noScroll" v-model="component" :background-color="backgroundColor">
       <template v-slot:body>
         <div class="absolute fit row justify-center items-center">
           <q-spinner v-if="component && waiting" color="yellow" size="3em"></q-spinner>

@@ -1,4 +1,4 @@
-import { h, defineComponent, onBeforeUnmount } from 'vue'
+import { h, defineComponent, onBeforeUnmount, computed } from 'vue'
 import preventScroll from 'quasar/src/utils/prevent-scroll'
 import { textToRgb } from 'quasar/src/utils/colors'
 
@@ -21,7 +21,6 @@ export default defineComponent({
       type: String,
       default: 'not-allowed'
     },
-    id: String,
     noScroll: Boolean,
     modelValue: Boolean
   },
@@ -38,7 +37,7 @@ export default defineComponent({
      *
      * @return {{padding: number, backgroundColor: string, margin: number, zIndex: (Number|String)}}
      */
-    function style () {
+    const __style = computed(() => {
       const rgb = textToRgb(props.backgroundColor)
       return {
         zIndex: props.zIndex,
@@ -46,7 +45,7 @@ export default defineComponent({
         padding: 0,
         margin: 0
       }
-    }
+    })
 
     /**
      * Renders component with overlay.
@@ -58,7 +57,7 @@ export default defineComponent({
     function __renderComponent (slot) {
       const overlay = h('div', {
         class: `q-overlay q-overlay--component cursor-${props.cursorType}`,
-        style: style()
+        style: __style.value
       }, slots.body())
 
       return h('div', {
@@ -75,7 +74,7 @@ export default defineComponent({
     function __renderFullscreen () {
       return h('div', {
         class: `q-overlay fixed fullscreen cursor-${props.cursorType}`,
-        style: style()
+        style: __style.value
       }, [slots.body()])
     }
 
@@ -94,9 +93,6 @@ export default defineComponent({
         return void 0
       }
 
-      console.log(`No-Scroll: ${props.noScroll}`)
-      console.log(`Model: ${props.modelValue}`)
-      console.log(`Id: ${props.id}`)
       preventScroll(props.noScroll && props.modelValue)
 
       if (props.modelValue && isFullscreen) {
