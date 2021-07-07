@@ -23,6 +23,13 @@ components:
   codepen-title="QOverlay"
 />
 
+### Fab
+<example-viewer
+title=""
+file="Component"
+codepen-title="QOverlay"
+/>
+
 ### No Scroll
 <example-viewer
   title=""
