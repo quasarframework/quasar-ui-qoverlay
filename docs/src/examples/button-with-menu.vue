@@ -4,25 +4,32 @@
       <template v-slot:body>
         <div class="absolute fit row justify-center items-center">
           <q-spinner v-if="show === true && waiting === true" color="yellow" size="3em"></q-spinner>
-          <q-btn v-if="show === true && waiting !== true" color="primary" label="Exit" @click="onClickFabOverlay"/>
         </div>
       </template>
     </q-overlay>
 
-    <div>
-      <q-btn icon="add" fab>
-        <q-menu
-          @before-show="onClickFabOverlay"
-          @before-hide="onMouseClick">
+      <q-btn label="Add new component" icon="add"   @click="onClickFabOverlay">
+        <q-menu :no-parent-event='true' v-model="showMenu">
+          <q-list style="min-width: 100px">
+            <q-item clickable v-close-popup>
+              <q-item-section>Branches</q-item-section>
+            </q-item>
+            <q-item clickable v-close-popup>
+              <q-item-section>Leaves</q-item-section>
+            </q-item>
+            <q-item clickable v-close-popup>
+              <q-item-section>Roots</q-item-section>
+            </q-item>
+          </q-list>
         </q-menu>
       </q-btn>
-    </div>
-    <q-checkbox v-model="closeOnMouseClick" label="Close overlay on mouse click"/>
+
+
   </div>
 </template>
 
 <script>
-import { defineComponent, onBeforeUnmount, reactive, toRefs } from 'vue'
+import { defineComponent, onBeforeUnmount, reactive, toRefs, computed } from 'vue'
 import { QOverlay } from '@quasar/quasar-ui-qoverlay/src/QOverlay.js'
 import '@quasar/quasar-ui-qoverlay/src/QOverlay.sass'
 
@@ -39,6 +46,8 @@ function useFabOverlay(properties) {
       properties.waiting = true
       properties.timerId = setTimeout(() => {
         properties.waiting = false
+        properties.showMenu = true
+        properties.show = false
       }, 2000)
     }
  else {
@@ -71,7 +80,8 @@ export default defineComponent({
       waiting: false,
       timerId: null,
       color: 'rgb(255, 0, 0)',
-      closeOnMouseClick: false
+      closeOnMouseClick: false,
+      showMenu: false
     })
 
     const {
