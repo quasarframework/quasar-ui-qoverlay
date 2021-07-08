@@ -6,9 +6,9 @@ components:
   - apis/QOverlayJsonApi
 ---
 ## API
-<q-markdown-json-api />
+<q-overlay-json-api />
 
-## QOverlay
+## QOverlay Examples
 ### Fullscreen
 <example-viewer
   title=""
@@ -23,16 +23,9 @@ components:
   codepen-title="QOverlay"
 />
 
-### Fab
+### Button with menu
 <example-viewer
 title=""
-file="Component"
+file="ButtonWithMenu"
 codepen-title="QOverlay"
-/>
-
-### No Scroll
-<example-viewer
-  title=""
-  file="noScroll"
-  codepen-title="QOverlay"
 />
