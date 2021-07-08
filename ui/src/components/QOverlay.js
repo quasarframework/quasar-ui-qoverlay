@@ -75,7 +75,7 @@ export default defineComponent({
       return h('div', {
         class: `q-overlay fixed fullscreen cursor-${props.cursorType}`,
         style: __style.value
-      }, [slots.body()])
+      }, [slots.body && slots.body()])
     }
 
     /**
