@@ -68,7 +68,7 @@ function useFabOverlay(properties) {
 }
 
 export default defineComponent({
-  name: 'Fab',
+  name: 'ButtonWithMenu',
   components: {
     QOverlay
   },
