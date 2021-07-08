@@ -88,12 +88,12 @@ export default defineComponent({
       const slot = slots.default
       const isFullscreen = (slot && slot()) === void 0
 
+      preventScroll(props.noScroll && props.modelValue)
+
       // nothing to draw when fullscreen and not displaying
       if (!props.modelValue && isFullscreen) {
         return void 0
       }
-
-      preventScroll(props.noScroll && props.modelValue)
 
       if (props.modelValue && isFullscreen) {
         return __renderFullscreen()
