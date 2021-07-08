@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { defineComponent, onBeforeUnmount, reactive, ref, toRefs } from 'vue'
+import { defineComponent, onBeforeUnmount, reactive, toRefs } from 'vue'
 import { QOverlay } from '@quasar/quasar-ui-qoverlay/src/QOverlay.js'
 import '@quasar/quasar-ui-qoverlay/src/QOverlay.sass'
 
