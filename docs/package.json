@@ -16,7 +16,6 @@
     "dev:electron": "quasar dev -m electron"
   },
   "dependencies": {
-    "@datatraccorporation/markdown-it-mermaid": "^0.5.0",
     "@quasar/extras": "^1.10.7",
     "@quasar/quasar-ui-qoverlay": "./ui",
     "core-js": "^3.15.1",
