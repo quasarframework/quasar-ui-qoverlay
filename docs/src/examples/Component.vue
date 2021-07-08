@@ -57,6 +57,7 @@ function useComponentOverlay(properties) {
       properties.waiting = true
       properties.timerId = setTimeout(() => {
         properties.waiting = false
+        properties.show = false
       }, 2000)
     }
     else {
