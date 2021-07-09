@@ -1,14 +1,13 @@
 {
-  "mixins": [ "~quasar/src/mixins/model-toggle" ],
-
   "meta": {
     "docsUrl": "https://quasarframework.github.io/quasar-ui-qoverlay/docs"
   },
 
   "props": {
-    "value": {
+    "model-value": {
+      "category": "model",
       "type": "Boolean",
-      "desc": "Use v-model to control active state"
+      "desc": "Model of the component defining 'active' state. Either use this property (along with a listener for 'update:model-value' event) OR use v-model directive"
     },
     "opacity": {
       "type": [ "Number", "String" ],
@@ -21,7 +20,6 @@
       "type": "String",
       "category": "behavior",
       "desc": "Used to change the background color of the overlay. Removes alpha channel to use opacity property.",
-      "addedIn": "v1.0.3",
       "default": "#000000",
       "examples": ["#FFF", "rgba(255, 0, 255, 0.5)"]
     },
@@ -42,7 +40,6 @@
     "no-scroll": {
       "type": "Boolean",
       "category": "behavior",
-      "addedIn": "v1.0.0",
       "desc": "Used to turn off scrollbars"
     }
   },
@@ -51,7 +48,7 @@
       "desc": "Anything can go into this slot"
     },
     "body": {
-      "desc": "Anything using the body slot will be placed above the overlay"
+      "desc": "Anything using the body slot will be placed above the overlay (ex: QBtn)"
     }
   }
 }

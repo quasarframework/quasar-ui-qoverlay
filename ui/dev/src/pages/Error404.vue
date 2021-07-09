@@ -9,7 +9,7 @@
         Oops. Nothing here...
       </div>
 
-    <q-btn
+      <q-btn
         class="q-mt-xl"
         color="white"
         text-color="blue"
@@ -22,8 +22,10 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   name: 'Error404'
-}
+})
 </script>

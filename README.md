@@ -8,10 +8,9 @@ QOverlay (Vue Plugin, UMD and Quasar App Extension)
 
 
 # Structure
-
 * [/ui](ui) - standalone npm package (go here for more information)
 * [/app-extension](app-extension) - Quasar app extension
-* [/demo](demo) - docs, demo and examples project
+* [/docs](docs) - docs, demo and examples project
 * [live demo](https://quasarframework.github.io/quasar-ui-qoverlay/docs) - live docs, demo and examples
 
 # Demo Workflow
@@ -19,6 +18,8 @@ If you fork or download this project, make sure you have the Quasar CLI globally
 
 ```
 $ npm i -g @quasar/cli
+or
+yarn global add @quasar/cli
 ```
 
 The workflow to build the demo, on a fresh project, is as follows:
@@ -26,7 +27,7 @@ The workflow to build the demo, on a fresh project, is as follows:
 $ cd ui
 $ yarn
 $ yarn build
-$ cd ../demo
+$ cd ../docs
 $ yarn
 $ quasar dev
 ```
