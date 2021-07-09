@@ -1,3 +1,5 @@
+> If you are looking for QOverlay that supports Quasar v2/Vue v3, then head to the docs [here](https://qoverlay.netlify.app/).
+
 QOverlay (Vue Plugin, UMD and Quasar App Extension)
 ===
 
