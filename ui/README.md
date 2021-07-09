@@ -1,7 +1,7 @@
 QOverlay
 ===
 
-[![npm](https://img.shields.io/npm/v/@quasar/quasar-ui-qoverlay.svg?label=@quasar/quasar-ui-qoverlay)](https://www.npmjs.com/package/@quasar/quasar-ui-qoverlay)
+[![npm](https://img.shields.io/npm/v/@quasar/quasar-ui-qoverlay/next?label=@quasar/quasar-ui-qoverlay)](https://www.npmjs.com/package/@quasar/quasar-ui-qoverlay)
 [![npm](https://img.shields.io/npm/dt/@quasar/quasar-ui-qoverlay.svg)](https://www.npmjs.com/package/@quasar/quasar-ui-qoverlay)
 
 QOverlay is a [Quasar](https://quasar.dev) component. It allows you to have fullscreen or component overlays and put a component on top of the overlay.
