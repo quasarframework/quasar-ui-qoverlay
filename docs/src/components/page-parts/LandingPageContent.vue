@@ -6,7 +6,7 @@
         <div class="q-pa-sm">
           <!-- TODO: Jeff - need image before publishing -->
           <img
-            src="/qmarkdown--interactive-editor.png"
+            src="/qoverlay.png"
             class="shadow-10 rounded-borders"
             style="max-width: 340px;"
           />
