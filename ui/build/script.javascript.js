@@ -199,7 +199,7 @@ function injectVueRequirement (code) {
   }
 
   const checkMe = ` if (Vue === void 0) {
-    console.error('[ QOverlay ] Vue is required to run. Please add a script tag for it before loading QCOverlay.')
+    console.error('[ QOverlay ] Vue is required to run. Please add a script tag for it before loading QOverlay.')
     return
   }
   `
