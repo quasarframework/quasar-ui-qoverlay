@@ -1,6 +1,7 @@
 import { h, defineComponent, onBeforeUnmount, computed } from 'vue'
-import preventScroll from 'quasar/src/utils/prevent-scroll'
-import { textToRgb } from 'quasar/src/utils/colors'
+import preventScroll from '../utils/prevent-scroll'
+import { colors } from 'quasar'
+const { textToRgb } = colors
 
 export default defineComponent({
   name: 'QOverlay',
