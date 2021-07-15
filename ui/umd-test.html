@@ -9,7 +9,7 @@
 
     <title>UMD test</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel="stylesheet" type="text/css">
-    <link href="https://cdn.jsdelivr.net/npm/quasar@^1.0.0/dist/quasar.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/quasar@2/dist/quasar.prod.css" rel="stylesheet" type="text/css">
     <link href="dist/index.css" rel="stylesheet" type="text/css">
     <style>
  body {
@@ -94,53 +94,62 @@
       </q-layout>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/quasar@^1.0.0/dist/quasar.ie.polyfills.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@^2.0.0/dist/vue.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/quasar@^1.0.0/dist/quasar.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quasar@2/dist/quasar.umd.prod.js"></script>
     <script src="dist/index.umd.js"></script>
 
     <script>
-      new Vue({
-        el: '#q-app',
+      const { onBeforeUnmount, watch, ref } = Vue
+      const app = Vue.createApp({
+        setup () {
+          let timerId = null
+          const fullscreen = ref(false),
+            component = ref(false),
+            waiting = ref(false),
+            noScroll = ref(false)
 
-        data: function () {
+
+          onBeforeUnmount(() => {
+            clearTimeout(timerId)
+          })
+
+          watch(() => fullscreen.value, (val) => {
+            clearTimeout(timerId)
+            if (val) {
+              waiting.value = true
+              timerId = setTimeout(() => {
+                waiting.value = false
+              }, 2000)
+            } else {
+              waiting.value = false
+            }
+          })
+
+          watch(() => component.value, (val) => {
+            clearTimeout(timerId)
+            if (val) {
+              waiting.value = true
+              this.timerId = setTimeout(() => {
+                waiting.value = false
+              }, 2000)
+            } else {
+              waiting.value = false
+            }
+          })
+
           return {
             version: QOverlay.version,
-            fullscreen: false,
-            component: false,
-            waiting: false,
-            timerId: null,
-            noScroll: false
-          }
-        },
-        beforeDestroy () {
-          clearTimeout(this.timerId)
-        },
-        watch: {
-          fullscreen (val) {
-            clearTimeout(this.timerId)
-            if (val) {
-              this.waiting = true
-              this.timerId = setTimeout(() => {
-                this.waiting = false
-              }, 2000)
-            } else {
-              this.waiting = false
-            }
-          },
-          component (val) {
-            clearTimeout(this.timerId)
-            if (val) {
-              this.waiting = true
-              this.timerId = setTimeout(() => {
-                this.waiting = false
-              }, 2000)
-            } else {
-              this.waiting = false
-            }
+            fullscreen,
+            component,
+            waiting,
+            noScroll
           }
         }
       })
+
+      app.use(Quasar)
+      app.use(QOverlay)
+      app.mount('#q-app')
     </script>
   </body>
 </html>
