@@ -6,7 +6,7 @@
  * API: https://github.com/quasarframework/quasar/blob/master/app/lib/app-extension/IndexAPI.js
  */
 
-function extendConf(conf) {
+function extendConf (conf) {
   // register our boot file
   conf.boot.push('~@quasar/quasar-app-extension-qoverlay/src/boot/register.js')
 
@@ -23,7 +23,7 @@ module.exports = function (api) {
   // hard dependencies, as in a minimum version of the "quasar"
   // package or a minimum version of "@quasar/app" CLI
   api.compatibleWith('quasar', '^2.0.0')
-  api.compatibleWith('@quasar/app', '^3.0.0') // needed for describe to work properly
+  api.compatibleWith('@quasar/app', '^3.0.0')
 
   // Uncomment the line below if you provide a JSON API for your component
   api.registerDescribeApi('QOverlay', '~@quasar/quasar-ui-qoverlay/dist/api/QOverlay.json')
