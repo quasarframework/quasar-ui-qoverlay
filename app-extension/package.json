@@ -1,6 +1,6 @@
 {
   "name": "@quasar/quasar-app-extension-qoverlay",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0-alpha.2",
   "description": "A Quasar App Extension",
   "author": "Jeff Galbraith <jeff@quasar.dev>",
   "license": "MIT",
@@ -31,7 +31,7 @@
     "overlay"
   ],
   "dependencies": {
-    "@quasar/quasar-ui-qoverlay": "^2.0.0-alpha.1"
+    "@quasar/quasar-ui-qoverlay": "^2.0.0-alpha.2"
   },
   "engines": {
     "node": ">= 10.0.0",
