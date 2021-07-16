@@ -2,7 +2,7 @@
   <div class="row justify-center q-pa-md q-gutter-sm">
 
     <q-checkbox v-model="noScroll" label="Disable scrolling when showing overlay" />
-    <div class="column">
+    <div class="column q-gutter-sm">
       <q-btn label="Show Fullscreen Overlay (Red)" @click="onClickComponentOverlay('rgb(255,0,0)')"></q-btn>
       <q-btn label="Show Fullscreen Overlay (Green)" @click="onClickComponentOverlay('rgb(0,255,0)')"></q-btn>
       <q-btn label="Show Fullscreen Overlay (Blue)" @click="onClickComponentOverlay('#0000FF')"></q-btn>
