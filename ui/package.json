@@ -6,6 +6,7 @@
   "license": "MIT",
   "module": "dist/index.esm.js",
   "main": "dist/index.common.js",
+  "typings": "dist/types/index.d.ts",
   "scripts": {
     "lint": "eslint --ext .js,.vue src",
     "lint-fix": "eslint --ext .js,.vue src --fix",
@@ -35,6 +36,7 @@
   "homepage": "https://github.com/quasarframework/quasar-ui-qoverlay",
   "keywords": [
     "quasar",
+    "quasarframework",
     "app",
     "app extension",
     "extension",
@@ -88,6 +90,5 @@
     "last 4 ChromeAndroid versions",
     "last 4 FirefoxAndroid versions",
     "last 4 iOS versions"
-  ],
-  "typings": "dist/types/index.d.ts"
+  ]
 }
