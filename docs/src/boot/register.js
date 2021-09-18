@@ -23,4 +23,9 @@ export default boot(({ app }) => {
   app.component('JsonApiViewer', JsonApiViewer)
   app.component('MarkdownPage', MarkdownPage)
   app.component('MarkdownLink', MarkdownLink)
+
+  if (process.env.DEV) {
+    const QOverlay = require('@quasar/quasar-ui-qoverlay')
+    app.use(QOverlay)
+  }
 })
