@@ -3,6 +3,6 @@ title: Changelog
 desc: The latest QOverlay releases
 keys: latest-news
 components:
-- releases/QOverlayReleases
+  - releases/Releases
 ---
-<q-overlay-releases class="q-mt-sm"/>
+<releases class="q-mt-sm"/>
