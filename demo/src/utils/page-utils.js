@@ -1,7 +1,7 @@
 export function copyHeading (id, message = 'Anchor has been copied to clipboard.', color = 'white', textColor = 'primary', icon = 'done', position = 'top', timeout = 2000) {
   const text = window.location.origin + window.location.pathname + '#' + id
 
-  var textArea = document.createElement('textarea')
+  const textArea = document.createElement('textarea')
   textArea.className = 'fixed-top'
   textArea.value = text
   document.body.appendChild(textArea)
