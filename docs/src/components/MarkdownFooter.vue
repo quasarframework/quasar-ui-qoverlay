@@ -42,6 +42,7 @@ export default {
 <style lang="sass">
 .markdown-copyright
   font-family: Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace
+  text-align: center
 
 .markdown-page__footer--icons
   font-size: 28px

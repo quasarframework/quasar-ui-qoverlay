@@ -21,4 +21,5 @@ QOverlay allows you to write overlays either on Fullscreen or the Component leve
 ## Features
 
 - Able to control "no scrolling"
-- ...
+- Put componentson top of an overlay
+- You're in control
