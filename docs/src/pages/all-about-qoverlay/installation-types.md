@@ -152,32 +152,32 @@ Add the following tag(s) after the Quasar ones:
 ```html
 <head>
   <!-- AFTER the Quasar stylesheet tags: -->
-  <link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay@next/dist/QOverlay.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay/dist/QOverlay.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <!-- at end of body, AFTER Quasar script(s): -->
-  <script src="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay@next/dist/QOverlay.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay/dist/QOverlay.umd.min.js"></script>
 </body>
 ```
 If you need the RTL variant of the CSS, then go for the following (instead of the above stylesheet link):
 ```html
-<link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay@next/dist/QOverlay.rtl.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay/dist/QOverlay.rtl.min.css" rel="stylesheet" type="text/css">
 ```
 
 ### Vue install
 
 ```html
 <head>
-  <link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay@next/dist/QOverlay.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay/dist/QOverlay.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <!-- at end of body: -->
-  <script src="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay@next/dist/QOverlay.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay/dist/QOverlay.umd.min.js"></script>
 </body>
 ```
 If you need the RTL variant of the CSS, then go for the following (instead of the above stylesheet link):
 ```html
-<link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay@next/dist/QOverlay.rtl.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay/dist/QOverlay.rtl.min.css" rel="stylesheet" type="text/css">
 ```
 
 Your Vue source:
