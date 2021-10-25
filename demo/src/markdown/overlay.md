@@ -20,7 +20,7 @@ QOverlay
 
 To add as an App Extension to your Quasar application, run the following (in your Quasar app folder):
 ```
-quasar ext add @quasar/qoverlay
+quasar ext add @quasar/qoverlay@qv1
 ```
 
 #### Uninstall
@@ -106,16 +106,16 @@ Add the following tag(s) after the Quasar ones:
 ```html
 <head>
   <!-- AFTER the Quasar stylesheet tags: -->
-  <link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay/dist/index.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay@qv1/dist/index.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <!-- at end of body, AFTER Quasar script(s): -->
-  <script src="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay/dist/index.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay@qv1/dist/index.umd.min.js"></script>
 </body>
 ```
 If you need the RTL variant of the CSS, then go for the following (instead of the above stylesheet link):
 ```html
-<link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay/dist/index.rtl.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay@qv1/dist/index.rtl.min.css" rel="stylesheet" type="text/css">
 ```
 :::
 

@@ -43,7 +43,8 @@ export default {
         this.timerId = setTimeout(() => {
           this.waiting = false
         }, 2000)
-      } else {
+      }
+      else {
         this.waiting = false
       }
     }
