@@ -24,7 +24,10 @@ function preventBodyScroll(): void {
     body.classList.add("q-body--force-scrollbar-x");
   }
 
-  if (overflowY !== "hidden" && (overflowY === "scroll" || body.scrollHeight > window.innerHeight)) {
+  if (
+    overflowY !== "hidden" &&
+    (overflowY === "scroll" || body.scrollHeight > window.innerHeight)
+  ) {
     body.classList.add("q-body--force-scrollbar-y");
   }
 

@@ -154,6 +154,7 @@ const docsMenus: SiteMenuItem[] = [
     name: "Other",
     mq: 760,
     children: [
+      { name: "Upgrade Guide", path: "/other/upgrade-guide" },
       { name: "Releases", path: "/other/releases" },
       { name: "Contact", path: "/other/contact" },
       {
@@ -193,8 +194,7 @@ export const sidebar = processedMenus;
 const config: SiteConfig = {
   lang: "en-US",
   title: productName,
-  description:
-    "Wheel-style string, time, date, and range overlays for Vue and Quasar applications",
+  description: "Fullscreen and component-scoped overlays for Vue and Quasar applications",
   theme: "doc",
   version,
   copyright: {

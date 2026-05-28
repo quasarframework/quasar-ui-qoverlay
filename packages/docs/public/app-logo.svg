@@ -1,42 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
   <title id="title">QOverlay logo</title>
-  <desc id="desc">Three scrolling picker columns with a highlighted selected row.</desc>
+  <desc id="desc">A layered application window with a translucent overlay and progress pulse.</desc>
   <defs>
-    <linearGradient id="bg" x1="16" x2="112" y1="12" y2="116" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#10243c" />
-      <stop offset="1" stop-color="#07101f" />
+    <linearGradient id="bg" x1="18" x2="110" y1="12" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#173d5f" />
+      <stop offset="1" stop-color="#06131f" />
     </linearGradient>
-    <linearGradient id="accent" x1="26" x2="102" y1="35" y2="93" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#43f0c6" />
-      <stop offset="1" stop-color="#2e8bff" />
+    <linearGradient id="card" x1="28" x2="100" y1="28" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#dff8ff" />
     </linearGradient>
-    <linearGradient id="column" x1="32" x2="96" y1="22" y2="106" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#ffffff" stop-opacity=".24" />
-      <stop offset=".5" stop-color="#ffffff" stop-opacity=".1" />
-      <stop offset="1" stop-color="#ffffff" stop-opacity=".2" />
+    <linearGradient id="overlay" x1="28" x2="100" y1="38" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00d2ff" stop-opacity=".78" />
+      <stop offset="1" stop-color="#1665ff" stop-opacity=".72" />
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#000" flood-opacity=".32" />
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000" flood-opacity=".35" />
     </filter>
   </defs>
-  <rect width="128" height="128" rx="30" fill="url(#bg)" />
+  <rect width="128" height="128" rx="30" fill="url(#bg)"/>
   <g filter="url(#shadow)">
-    <rect x="24" y="20" width="80" height="88" rx="18" fill="#0d1a2d" stroke="#8ae9ff" stroke-opacity=".35" stroke-width="2" />
-    <rect x="31" y="28" width="18" height="72" rx="9" fill="url(#column)" />
-    <rect x="55" y="28" width="18" height="72" rx="9" fill="url(#column)" />
-    <rect x="79" y="28" width="18" height="72" rx="9" fill="url(#column)" />
-    <rect x="28" y="51" width="72" height="26" rx="13" fill="url(#accent)" opacity=".95" />
-    <g fill="#ffffff" font-family="Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">
-      <text x="40" y="47" opacity=".48">08</text>
-      <text x="64" y="47" opacity=".48">24</text>
-      <text x="88" y="47" opacity=".48">AM</text>
-      <text x="40" y="68">09</text>
-      <text x="64" y="68">30</text>
-      <text x="88" y="68">PM</text>
-      <text x="40" y="91" opacity=".48">10</text>
-      <text x="64" y="91" opacity=".48">45</text>
-      <text x="88" y="91" opacity=".48">--</text>
-    </g>
-    <path d="M29 50h70M29 78h70" stroke="#fff" stroke-opacity=".55" stroke-width="2" />
+    <rect x="24" y="24" width="80" height="80" rx="18" fill="url(#card)"/>
+    <rect x="34" y="40" width="60" height="8" rx="4" fill="#0f6aa9" opacity=".32"/>
+    <rect x="34" y="56" width="42" height="8" rx="4" fill="#0f6aa9" opacity=".22"/>
+    <rect x="34" y="72" width="54" height="8" rx="4" fill="#0f6aa9" opacity=".18"/>
+    <rect x="24" y="24" width="80" height="80" rx="18" fill="url(#overlay)"/>
+    <circle cx="64" cy="64" r="19" fill="#ffffff" opacity=".22"/>
+    <path d="M64 45a19 19 0 0 1 18.4 14.2" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+    <path d="M64 83a19 19 0 0 1-18.4-14.2" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".65"/>
   </g>
 </svg>

@@ -16,8 +16,8 @@ useMeta({
   titleTemplate: (title) => `${title} | QOverlay`,
 
   meta: getMeta(
-    "QOverlay - wheel-style string, time, date, and range overlays for Vue and Quasar",
-    "QOverlay is a Vue and Quasar component for building compact string, time, date, and range overlays and overlay controls.",
+    "QOverlay - fullscreen and component-scoped overlays for Vue and Quasar",
+    "QOverlay is a Vue and Quasar component for temporarily blocking interaction while work completes.",
   ),
 });
 </script>

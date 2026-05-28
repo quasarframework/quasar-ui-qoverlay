@@ -1,149 +1,75 @@
-QOverlay
-===
+# QOverlay
 
-[![npm](https://img.shields.io/npm/v/@quasar/quasar-ui-qoverlay/next?label=@quasar/quasar-ui-qoverlay)](https://www.npmjs.com/package/@quasar/quasar-ui-qoverlay)
+[![npm](https://img.shields.io/npm/v/@quasar/quasar-ui-qoverlay/beta?label=@quasar/quasar-ui-qoverlay)](https://www.npmjs.com/package/@quasar/quasar-ui-qoverlay)
 [![npm](https://img.shields.io/npm/dt/@quasar/quasar-ui-qoverlay.svg)](https://www.npmjs.com/package/@quasar/quasar-ui-qoverlay)
 
-QOverlay is a [Quasar](https://quasar.dev) component. It allows you to have fullscreen or component overlays and put a component on top of the overlay.
+QOverlay is a Vue 3 and Quasar component for fullscreen and component-scoped overlays.
 
-# Examples and Documentation
-Can be found [here](https://quasarframework.github.io/quasar-ui-qoverlay)
+## Install
 
-
-# Usage
-
-## Quasar CLI project
-
-Install the [App Extension](../app-extension).
-
-**OR**:
-
-Create and register a boot file:
-
-```js
-import Vue from 'vue'
-import Plugin from '@quasar/quasar-ui-qoverlay'
-import '@quasar/quasar-ui-qoverlay/dist/index.css'
-
-Vue.use(Plugin)
+```bash
+pnpm add @quasar/quasar-ui-qoverlay@beta
+# or
+bun add @quasar/quasar-ui-qoverlay@beta
+# or
+yarn add @quasar/quasar-ui-qoverlay@beta
+# or
+npm install @quasar/quasar-ui-qoverlay@beta
 ```
 
-**OR**:
+## Quasar Boot File
 
-```html
-<style src="@quasar/quasar-ui-qoverlay/dist/index.css"></style>
+```ts
+import { defineBoot } from "@quasar/app-vite";
+import QOverlay from "@quasar/quasar-ui-qoverlay";
+import "@quasar/quasar-ui-qoverlay/dist/index.css";
 
-<script>
-import { QOverlay } from '@quasar/quasar-ui-qoverlay'
+export default defineBoot(({ app }) => {
+  app.use(QOverlay);
+});
+```
 
-export default {
-  components: {
-    QOverlay
-  }
-}
+## Direct Component Import
+
+```vue
+<template>
+  <q-overlay v-model="loading">
+    <template #body>
+      <div class="fullscreen row justify-center items-center">
+        <q-spinner color="yellow" size="3em" />
+      </div>
+    </template>
+  </q-overlay>
+</template>
+
+<script setup lang="ts">
+import { ref } from "vue";
+import { QOverlay } from "@quasar/quasar-ui-qoverlay";
+import "@quasar/quasar-ui-qoverlay/dist/index.css";
+
+const loading = ref(false);
 </script>
 ```
 
-## Vue CLI project
+## UMD
 
-```js
-import Vue from 'vue'
-import Plugin from '@quasar/quasar-ui-qoverlay'
-import '@quasar/quasar-ui-qoverlay/dist/index.css'
-
-Vue.use(Plugin)
-```
-
-**OR**:
+The UMD build exports `window.QOverlay`.
 
 ```html
-<style src="@quasar/quasar-ui-qoverlay/dist/index.css"></style>
-
-<script>
-import { QOverlay } from '@quasar/quasar-ui-qoverlay'
-
-export default {
-  components: {
-    QOverlay
-  }
-}
-</script>
+<link
+  href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay@beta/dist/index.min.css"
+  rel="stylesheet"
+/>
+<script src="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay@beta/dist/index.umd.min.js"></script>
 ```
 
-## UMD variant
-
-Exports `window.QOverlay`.
-
-Add the following tag(s) after the Quasar ones:
-
-```html
-<head>
-  <!-- AFTER the Quasar stylesheet tags: -->
-  <link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay/dist/index.min.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-  <!-- at end of body, AFTER Quasar script(s): -->
-  <script src="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay/dist/index.umd.min.js"></script>
-</body>
-```
-If you need the RTL variant of the CSS, then go for the following (instead of the above stylesheet link):
-```html
-<link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay/dist/index.rtl.min.css" rel="stylesheet" type="text/css">
-```
-
-[UMD example on Codepen](https://codepen.io/Hawkeye64/pen/wvBKVNB)
-
-# Building the Projects
-
-## Setup
-
-In both the `ui` and `ui/dev` folders:
-
-```bash
-$ yarn
-```
-
-## Developing
-
-In the `ui` folder
-
-```bash
-# start dev in SPA mode
-$ yarn dev
-
-# start dev in UMD mode
-$ yarn dev:umd
-
-# start dev in SSR mode
-$ yarn dev:ssr
-
-# start dev in Cordova iOS mode
-$ yarn dev:ios
-
-# start dev in Cordova Android mode
-$ yarn dev:android
-
-# start dev in Electron mode
-$ yarn dev:electron
-```
-
-## Building package
-
-```bash
-$ yarn build
-```
-
-# build just the JSON API
-```bash
-$ yarn build:api
-```
-
-# Support
+## Support
 
 If QOverlay is useful in your workflow and you want to support ongoing maintenance:
 
 GitHub Sponsors: https://github.com/sponsors/hawkeye64
 PayPal: https://paypal.me/hawkeye64
 
-# License
+## License
+
 MIT (c) Jeff Galbraith <jeff@quasar.dev>

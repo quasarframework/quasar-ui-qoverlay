@@ -24,7 +24,7 @@ export type OverlayCursorType =
   | "progress"
   | "row-resize"
   | "s-resize"
-  | "nontext"
+  | "text"
   | "w-resize"
   | "wait"
   | "zoom-in"

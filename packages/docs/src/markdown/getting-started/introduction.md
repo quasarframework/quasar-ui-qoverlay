@@ -9,20 +9,18 @@ related:
 
 ## What is QOverlay
 
-QOverlay is a Quasar component package for building compact wheel-style inputs. It includes
-string, time, date, date-time, and range overlays that feel at home inside forms, dialogs, and
-dense control panels.
+QOverlay is a Quasar component package for temporarily blocking interaction while work completes.
+It can cover the full viewport or wrap one component, making it useful for loading states,
+confirmation handoffs, and short asynchronous transitions.
 
-Use it when a native select, date picker, or time input is too blunt for the interaction you want.
-The overlays keep the current value centered, make nearby values visible, and support keyboard-like
-previous/next controls without requiring a full calendar or menu overlay.
+Use it when a spinner alone is not enough context, but a full dialog would be too heavy. The overlay
+keeps the blocked area obvious while leaving room for a message, progress indicator, or recovery
+action in the `body` slot.
 
-## Components
+## Modes
 
-- `QOverlay` chooses the right overlay from its `view` prop.
-- `QStringOverlay` scrolls through a fixed list of string options.
-- `QTimeOverlay` and `QTimeRangeOverlay` handle time values and time ranges.
-- `QDateOverlay`, `QDateTimeOverlay`, and `QDateRangeOverlay` handle date-focused values.
+- Fullscreen mode covers the page when no default slot is provided.
+- Component mode wraps a card, form, table, or panel when a default slot is provided.
+- The `body` slot renders visible content such as spinners, buttons, and status text.
 
-Each component can be styled with Quasar palette colors, dense mode, disabled items, intervals, and
-range validation options.
+The background color, opacity, z-index, cursor, and scroll locking behavior are configurable.

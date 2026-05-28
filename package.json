@@ -2,10 +2,10 @@
   "name": "quasar-ui-qoverlay-workspace",
   "version": "3.0.0-beta.0",
   "private": true,
-  "type": "module",
   "description": "QOverlay mono-repo",
   "license": "MIT",
   "author": "Jeff Galbraith <jeff@quasar.dev>",
+  "type": "module",
   "scripts": {
     "clean": "rm -rf node_modules pnpm-lock.yaml packages/ui/node_modules packages/docs/node_modules packages/app-extension/node_modules packages/docs/.quasar packages/docs/dist",
     "build": "pnpm run build:ui && pnpm run build:docs",

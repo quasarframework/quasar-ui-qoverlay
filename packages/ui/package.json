@@ -3,11 +3,11 @@
   "version": "3.0.0-beta.0",
   "description": "QOverlay - fullscreen and component-scoped overlays for Quasar",
   "keywords": [
+    "blocker",
+    "loading",
     "overlay",
     "quasar",
-    "quasarframework",
-    "loading",
-    "blocker"
+    "quasarframework"
   ],
   "homepage": "https://github.com/quasarframework/quasar-ui-qoverlay",
   "bugs": "https://github.com/quasarframework/quasar-ui-qoverlay/issues",
@@ -110,9 +110,5 @@
   "engines": {
     "node": ">=22.13",
     "pnpm": ">=11.4.0"
-  },
-  "vetur": {
-    "tags": "dist/vetur/tags.json",
-    "attributes": "dist/vetur/attributes.json"
   }
 }

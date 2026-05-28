@@ -1,5 +1,13 @@
 import { colors } from "quasar";
-import { computed, defineComponent, h, onBeforeUnmount, watch, type PropType, type StyleValue } from "vue";
+import {
+  computed,
+  defineComponent,
+  h,
+  onBeforeUnmount,
+  watch,
+  type PropType,
+  type StyleValue,
+} from "vue";
 
 import preventScroll from "../utils/prevent-scroll";
 
@@ -39,7 +47,9 @@ export default defineComponent({
       };
     });
 
-    const shouldPreventScroll = computed(() => props.noScroll === true && props.modelValue === true);
+    const shouldPreventScroll = computed(
+      () => props.noScroll === true && props.modelValue === true,
+    );
 
     watch(shouldPreventScroll, (value) => preventScroll(value), { immediate: true });
 
@@ -79,7 +89,7 @@ export default defineComponent({
         return h("div", { class: "q-overlay--wrapper" }, [overlay, defaultSlot?.()]);
       }
 
-      return h("div", { class: "q-overlay" }, defaultSlot?.() ?? []);
+      return h("div", { class: "q-overlay--wrapper" }, defaultSlot?.() ?? []);
     };
   },
 });

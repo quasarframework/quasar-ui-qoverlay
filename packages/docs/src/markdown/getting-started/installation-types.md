@@ -73,14 +73,6 @@ app.mount("#app");
 <style src="@quasar/quasar-ui-qoverlay/dist/index.css"></style>
 
 <script setup lang="ts">
-  import {
-    QDateRangeOverlay,
-    QDateOverlay,
-    QDateTimeOverlay,
-    QOverlay,
-    QStringOverlay,
-    QTimeRangeOverlay,
-    QTimeOverlay,
-  } from "@quasar/quasar-ui-qoverlay";
+  import { QOverlay } from "@quasar/quasar-ui-qoverlay";
 </script>
 ```

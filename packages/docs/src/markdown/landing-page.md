@@ -1,6 +1,6 @@
 ---
 title: QOverlay
-desc: Wheel-style string, time, date, and range overlays for Vue and Quasar applications
+desc: Fullscreen and component-scoped overlays for Vue and Quasar applications
 editLink: false
 ---
 

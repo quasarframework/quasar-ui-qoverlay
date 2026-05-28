@@ -1,43 +1,45 @@
-QOverlay (Vue Plugin, UMD and Quasar App Extension)
-===
+# QOverlay
 
-![@quasar/quasar-ui-qoverlay](https://img.shields.io/npm/v/@quasar/quasar-ui-qoverlay/next?label=@quasar/quasar-ui-qoverlay)
-![@quasar/quasar-app-extension-qoverlay](https://img.shields.io/npm/v/@quasar/quasar-app-extension-qoverlay/next?label=@quasar/quasar-app-extension-qoverlay)
-[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/quasarframework/quasar-ui-qoverlay.svg)]()
-[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/quasarframework/quasar-ui-qoverlay.svg)]()
+[![UI package](https://img.shields.io/npm/v/@quasar/quasar-ui-qoverlay/beta?label=@quasar/quasar-ui-qoverlay)](https://www.npmjs.com/package/@quasar/quasar-ui-qoverlay)
+[![App Extension](https://img.shields.io/npm/v/@quasar/quasar-app-extension-qoverlay/beta?label=@quasar/quasar-app-extension-qoverlay)](https://www.npmjs.com/package/@quasar/quasar-app-extension-qoverlay)
 
+QOverlay provides fullscreen and component-scoped overlays for Vue and Quasar applications.
 
-# Structure
-* [/ui](ui) - standalone npm package (go here for more information)
-* [/app-extension](app-extension) - Quasar app extension
-* [/docs](docs) - docs, demo and examples project
-* [live demo](https://quasarframework.github.io/quasar-ui-qoverlay/docs) - live docs, demo and examples
+## Packages
 
-# Demo Workflow
-If you fork or download this project, make sure you have the Quasar CLI globally installed:
+- [packages/ui](packages/ui) - standalone Vue/Quasar component package.
+- [packages/app-extension](packages/app-extension) - Quasar App Extension wrapper.
+- [packages/docs](packages/docs) - documentation, demos, and examples.
 
-```
-$ npm i -g @quasar/cli
-or
-yarn global add @quasar/cli
-```
+## Install
 
-The workflow to build the demo, on a fresh project, is as follows:
-```
-$ cd ui
-$ yarn
-$ yarn build
-$ cd ../docs
-$ yarn
-$ quasar dev
+```bash
+pnpm add @quasar/quasar-ui-qoverlay@beta
+# or
+bun add @quasar/quasar-ui-qoverlay@beta
+# or
+yarn add @quasar/quasar-ui-qoverlay@beta
+# or
+npm install @quasar/quasar-ui-qoverlay@beta
+# or, in a Quasar CLI project
+quasar ext add @quasar/qoverlay@beta
 ```
 
-# Support
+## Development
+
+```bash
+pnpm install
+pnpm verify
+pnpm --filter docs dev
+```
+
+## Support
 
 If QOverlay is useful in your workflow and you want to support ongoing maintenance:
 
 GitHub Sponsors: https://github.com/sponsors/hawkeye64
 PayPal: https://paypal.me/hawkeye64
 
-# License
+## License
+
 MIT (c) Jeff Galbraith <jeff@quasar.dev>
