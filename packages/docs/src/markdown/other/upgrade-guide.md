@@ -1,0 +1,55 @@
+---
+title: Upgrade Guide
+desc: Upgrade to QOverlay v3
+keys: other
+related:
+  - /getting-started/installation-types
+  - /developing/using-qoverlay
+---
+
+QOverlay v3 modernizes the package for Quasar v2, Vue 3, `@quasar/app-vite` v3, and ESM-first
+tooling.
+
+## Requirements
+
+- Vue 3 and Quasar v2.
+- Quasar CLI Vite with `@quasar/app-vite` v3 beta for the App Extension.
+- Node.js 22.13 or newer.
+- pnpm 11.4 or newer when working in this repository.
+
+## Update Packages
+
+For Quasar App Extension installs:
+
+```bash
+quasar ext add @quasar/qoverlay@beta
+```
+
+For direct UI package installs:
+
+```bash
+pnpm add @quasar/quasar-ui-qoverlay@beta
+# or
+bun add @quasar/quasar-ui-qoverlay@beta
+# or
+yarn add @quasar/quasar-ui-qoverlay@beta
+# or
+npm install @quasar/quasar-ui-qoverlay@beta
+```
+
+## Import Changes
+
+Use the package entrypoint instead of old source-file imports:
+
+```ts
+import { QOverlay } from "@quasar/quasar-ui-qoverlay";
+import "@quasar/quasar-ui-qoverlay/dist/index.css";
+```
+
+Do not import old paths such as `src/QOverlay.js` or `src/QOverlay.sass`; those belonged to the
+legacy package layout.
+
+## Build Output
+
+QOverlay v3 publishes ESM and UMD builds. CommonJS entrypoints have been removed to match the modern
+Quasar and Vite ecosystem.

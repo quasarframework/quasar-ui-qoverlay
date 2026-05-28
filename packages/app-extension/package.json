@@ -1,0 +1,48 @@
+{
+  "name": "@quasar/quasar-app-extension-qoverlay",
+  "version": "3.0.0-beta.0",
+  "description": "QOverlay App Extension for Quasar",
+  "license": "MIT",
+  "author": "Jeff Galbraith <jeff@quasar.dev>",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "lint": "oxlint src"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/hawkeye64"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": "https://github.com/quasarframework/quasar-ui-qoverlay/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quasarframework/quasar-ui-qoverlay.git"
+  },
+  "homepage": "https://github.com/quasarframework/quasar-ui-qoverlay",
+  "keywords": [
+    "quasar",
+    "quasarframework",
+    "app",
+    "app extension",
+    "extension",
+    "overlay"
+  ],
+  "dependencies": {
+    "@quasar/quasar-ui-qoverlay": "workspace:^"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "3.0.0-beta.32",
+    "quasar": "^2.19.3",
+    "typescript": "~6.0.3"
+  },
+  "peerDependencies": {
+    "@quasar/app-vite": ">=3.0.0-beta.30"
+  },
+  "engines": {
+    "node": ">=22.13",
+    "pnpm": ">=11.4.0"
+  }
+}
