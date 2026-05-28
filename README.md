@@ -32,8 +32,12 @@ $ yarn
 $ quasar dev
 ```
 
-# Donate
-If you appreciate the work that went into this, please consider donating to [Quasar](https://donate.quasar.dev) or [Jeff](https://github.com/sponsors/hawkeye64).
+# Support
+
+If QOverlay is useful in your workflow and you want to support ongoing maintenance:
+
+GitHub Sponsors: https://github.com/sponsors/hawkeye64
+PayPal: https://paypal.me/hawkeye64
 
 # License
 MIT (c) Jeff Galbraith <jeff@quasar.dev>
