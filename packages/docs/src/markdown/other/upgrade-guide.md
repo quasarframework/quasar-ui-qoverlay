@@ -41,8 +41,16 @@ npm install @quasar/quasar-ui-qoverlay@beta
 
 Use the package entrypoint instead of old source-file imports:
 
-```ts
+```ts [twoslash]
 import { QOverlay } from "@quasar/quasar-ui-qoverlay";
+
+QOverlay
+// ^?
+```
+
+Import the component stylesheet alongside the component:
+
+```ts
 import "@quasar/quasar-ui-qoverlay/dist/index.css";
 ```
 
