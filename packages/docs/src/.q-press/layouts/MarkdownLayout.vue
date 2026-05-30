@@ -20,11 +20,11 @@
       <MarkdownPageFooter :fullscreen="isFullscreen" />
     </q-page-container>
 
-    <q-page-overlay>
+    <q-page-scroller>
       <q-btn fab-mini color="brand-accent" :icon="mdiArrowUp" aria-label="Back to top">
         <q-tooltip>Back to top</q-tooltip>
       </q-btn>
-    </q-page-overlay>
+    </q-page-scroller>
 
     <q-no-ssr>
       <MarkdownDrawerSidebar v-if="siteConfig.config.useSidebar === true" />
@@ -72,7 +72,7 @@ const pageContentClass = computed(
   }
 
   // keep the button on top of sticky in examples
-  .q-page-overlay > .q-page-sticky {
+  .q-page-scroller > .q-page-sticky {
     z-index: 1;
   }
 
@@ -101,7 +101,7 @@ const pageContentClass = computed(
       }
 
       @media (max-width: 1845px) {
-        justify-content: start;
+        justify-content: flex-start;
 
         .markdown-page__toc-container--flowing {
           display: none;
