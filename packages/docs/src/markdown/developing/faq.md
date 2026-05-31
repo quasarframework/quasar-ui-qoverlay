@@ -26,6 +26,18 @@ css: [
 
 :::
 
+:::details Q. Can I inspect the component API from the CLI?
+
+Yes. After the App Extension is installed, run:
+
+```bash
+quasar describe QOverlay
+```
+
+The same generated API is shown on the [Using QOverlay](/developing/using-qoverlay) page.
+
+:::
+
 :::details Q. When should I use QOverlay?
 
 Use QOverlay when part of the UI must be temporarily blocked while an operation completes. It is
