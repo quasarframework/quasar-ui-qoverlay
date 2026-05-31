@@ -45,7 +45,7 @@ Use the package entrypoint instead of old source-file imports:
 ```ts [twoslash]
 import { QOverlay } from "@quasar/quasar-ui-qoverlay";
 
-QOverlay
+QOverlay;
 // ^?
 ```
 
