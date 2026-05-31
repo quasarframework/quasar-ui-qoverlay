@@ -27,13 +27,14 @@ quasar ext add @quasar/qoverlay@beta
 
 For direct UI package installs:
 
-```bash
+```tabs
+<<| bash pnpm |>>
 pnpm add @quasar/quasar-ui-qoverlay@beta
-# or
+<<| bash bun |>>
 bun add @quasar/quasar-ui-qoverlay@beta
-# or
+<<| bash yarn |>>
 yarn add @quasar/quasar-ui-qoverlay@beta
-# or
+<<| bash npm |>>
 npm install @quasar/quasar-ui-qoverlay@beta
 ```
 
