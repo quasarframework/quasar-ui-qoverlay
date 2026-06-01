@@ -22,7 +22,7 @@ quasar ext remove @quasar/qoverlay
 ## Requirements
 
 - Quasar v2.
-- `@quasar/app-vite` v3 beta.
+- `@quasar/app-vite` >=3.0.0-beta.35.
 
 ## Support
 
