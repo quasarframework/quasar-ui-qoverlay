@@ -2,7 +2,12 @@
   <div class="q-pa-md q-gutter-md">
     <div class="row items-center q-gutter-sm">
       <q-btn color="primary" label="Run fullscreen task" @click="showFullscreenOverlay" />
-      <q-toggle v-model="noScroll" label="Prevent page scroll while active" />
+      <q-toggle
+        v-model="noScroll"
+        color="cyan-5"
+        keep-color
+        label="Prevent page scroll while active"
+      />
     </div>
 
     <q-banner rounded class="bg-blue-grey-1 text-blue-grey-9">
