@@ -44,3 +44,10 @@ QOverlay also works well as a short-lived transition while remote data loads bef
 follow-up UI.
 
 <MarkdownExample title="Button With Menu" file="ButtonWithMenu"/>
+
+## Menu Backdrop
+
+Use a separate overlay when you want a backdrop behind a `QMenu` while keeping the menu attached to
+its trigger button.
+
+<MarkdownExample title="Menu Backdrop" file="MenuBackdrop"/>
