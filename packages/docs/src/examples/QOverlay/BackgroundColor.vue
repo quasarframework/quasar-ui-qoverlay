@@ -10,15 +10,20 @@
       />
     </div>
 
-    <q-slider
-      v-model="opacity"
-      label
-      :min="0.2"
-      :max="0.85"
-      :step="0.05"
-      color="primary"
-      class="opacity-slider"
-    />
+    <div class="opacity-control">
+      <div class="text-caption text-blue-grey-2">Overlay opacity</div>
+      <q-slider
+        v-model="opacity"
+        label
+        :min="0.2"
+        :max="0.85"
+        :step="0.05"
+        color="cyan-5"
+        track-color="blue-grey-8"
+        thumb-color="cyan-3"
+        class="opacity-slider"
+      />
+    </div>
 
     <q-overlay
       v-model="show"
@@ -60,6 +65,7 @@ function showColorOverlay(color: string): void {
 </script>
 
 <style scoped>
+.opacity-control,
 .opacity-slider {
   max-width: 420px;
 }
