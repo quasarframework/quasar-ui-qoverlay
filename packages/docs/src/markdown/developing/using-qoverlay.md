@@ -47,7 +47,7 @@ follow-up UI.
 
 ## Menu Backdrop
 
-Use a separate overlay when you want a backdrop behind a `QMenu` while keeping the menu attached to
-its trigger button.
+Add a separate backdrop overlay while a menu is open, without moving the `QMenu` away from its
+trigger button.
 
 <MarkdownExample title="Menu Backdrop" file="MenuBackdrop"/>
