@@ -1,38 +1,27 @@
 <template>
   <div class="q-pa-md q-gutter-md">
     <q-banner rounded class="bg-grey-2 text-grey-9">
-      Use an overlay to communicate a short asynchronous handoff before opening a menu, dialog, or
-      other follow-up UI.
+      Use an overlay to communicate a short asynchronous handoff, such as fetching menu options from
+      a remote server before opening a menu, dialog, or other follow-up UI.
     </q-banner>
 
     <q-overlay v-model="show" z-index="5000" opacity="0.45">
       <template #body>
-        <div class="fullscreen row justify-center items-center">
+        <div class="fullscreen column justify-center items-center q-gutter-md text-white">
           <q-spinner-grid color="yellow" size="4em" />
+          <div class="text-subtitle1">Fetching remote options...</div>
         </div>
       </template>
     </q-overlay>
 
-    <q-btn color="primary" icon="add" label="Add new section" @click="openMenuAfterOverlay">
+    <q-btn color="primary" icon="cloud_download" label="Load sections" @click="loadMenuOptions">
       <q-menu v-model="showMenu" no-parent-event>
         <q-list style="min-width: 180px">
-          <q-item v-close-popup clickable>
+          <q-item v-for="option in menuOptions" :key="option.label" v-close-popup clickable>
             <q-item-section avatar>
-              <q-icon name="account_tree" />
+              <q-icon :name="option.icon" />
             </q-item-section>
-            <q-item-section>Branches</q-item-section>
-          </q-item>
-          <q-item v-close-popup clickable>
-            <q-item-section avatar>
-              <q-icon name="eco" />
-            </q-item-section>
-            <q-item-section>Leaves</q-item-section>
-          </q-item>
-          <q-item v-close-popup clickable>
-            <q-item-section avatar>
-              <q-icon name="foundation" />
-            </q-item-section>
-            <q-item-section>Roots</q-item-section>
+            <q-item-section>{{ option.label }}</q-item-section>
           </q-item>
         </q-list>
       </q-menu>
@@ -46,17 +35,25 @@ import { QOverlay } from "@quasar/quasar-ui-qoverlay";
 
 const show = ref(false);
 const showMenu = ref(false);
+const menuOptions = ref<{ icon: string; label: string }[]>([]);
 let timer: ReturnType<typeof setTimeout> | undefined;
 
-function openMenuAfterOverlay(): void {
+function loadMenuOptions(): void {
   if (timer !== undefined) {
     clearTimeout(timer);
   }
 
   showMenu.value = false;
+  menuOptions.value = [];
   show.value = true;
 
+  // Simulate fetching menu options from a remote endpoint before opening the menu.
   timer = setTimeout(() => {
+    menuOptions.value = [
+      { icon: "account_tree", label: "Branches" },
+      { icon: "eco", label: "Leaves" },
+      { icon: "foundation", label: "Roots" },
+    ];
     show.value = false;
     showMenu.value = true;
     timer = undefined;

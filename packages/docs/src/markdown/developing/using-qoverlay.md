@@ -40,6 +40,7 @@ Tune the visual weight with `background-color` and `opacity`.
 
 ## Button With Menu
 
-QOverlay also works well as a short-lived transition before revealing follow-up UI.
+QOverlay also works well as a short-lived transition while remote data loads before revealing
+follow-up UI.
 
 <MarkdownExample title="Button With Menu" file="ButtonWithMenu"/>
