@@ -1,23 +1,15 @@
 <template>
-  <div class="q-pa-md q-gutter-md">
-    <div class="row items-center q-gutter-sm">
-      <q-btn color="primary" label="Run fullscreen task" @click="showFullscreenOverlay" />
-      <q-toggle
-        v-model="noScroll"
-        color="cyan-5"
-        keep-color
-        label="Prevent page scroll while active"
-      />
-    </div>
-
-    <q-banner rounded class="bg-blue-grey-1 text-blue-grey-9">
-      A fullscreen overlay is useful while a blocking operation is running. This example briefly
-      shows a loading state, then swaps to an action button so the user can dismiss it.
-    </q-banner>
-
-    <q-overlay v-model="show" :no-scroll="noScroll" :z-index="5000" cursor-type="wait">
+  <div class="q-pa-md">
+    <q-overlay
+      v-model="show"
+      :no-scroll="noScroll"
+      background-color="#050505"
+      opacity="0.72"
+      :z-index="5000"
+      cursor-type="wait"
+    >
       <template #body>
-        <div class="fullscreen column justify-center items-center q-gutter-md text-white">
+        <div class="absolute-full column justify-center items-center q-gutter-md text-white">
           <q-spinner v-if="waiting" color="yellow" size="4em" />
           <q-icon v-else name="check_circle" color="positive" size="4em" />
 
@@ -31,6 +23,25 @@
           />
         </div>
       </template>
+
+      <q-card class="fullscreen-demo-card">
+        <q-card-section class="q-gutter-md">
+          <div class="row items-center q-gutter-sm">
+            <q-btn color="primary" label="Run fullscreen task" @click="showFullscreenOverlay" />
+            <q-toggle
+              v-model="noScroll"
+              color="cyan-5"
+              keep-color
+              label="Prevent page scroll while active"
+            />
+          </div>
+
+          <q-banner rounded class="bg-blue-grey-1 text-blue-grey-9">
+            This preview uses a contained app surface so the docs page stays usable. In your app,
+            leave the default slot empty when the overlay should block the whole viewport.
+          </q-banner>
+        </q-card-section>
+      </q-card>
     </q-overlay>
   </div>
 </template>
@@ -70,3 +81,11 @@ function hideOverlay(): void {
 
 onBeforeUnmount(clearTimer);
 </script>
+
+<style scoped>
+.fullscreen-demo-card {
+  min-height: 220px;
+  background: #1f1f1f;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+</style>

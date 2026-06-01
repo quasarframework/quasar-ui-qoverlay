@@ -21,6 +21,9 @@ import QOverlayApi from '@quasar/quasar-ui-qoverlay/dist/api/QOverlay.json'
 Use fullscreen mode when a task should temporarily block the entire page. Leave the default slot
 empty and place visible content in the `body` slot.
 
+The live docs preview scopes the overlay to a contained app surface so it does not block the docs
+page itself.
+
 <MarkdownExample title="Fullscreen Overlay" file="Fullscreen"/>
 
 ## Component Overlay
