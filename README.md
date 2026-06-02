@@ -1,7 +1,7 @@
 # QOverlay
 
 [![UI package](https://img.shields.io/npm/v/@quasar/quasar-ui-qoverlay/beta?label=@quasar/quasar-ui-qoverlay)](https://www.npmjs.com/package/@quasar/quasar-ui-qoverlay)
-[![App Extension](https://img.shields.io/npm/v/@quasar/quasar-app-extension-qoverlay/betalabel=@quasar/quasar-app-extension-qoverlay)](https://www.npmjs.com/package/@quasar/quasar-app-extension-qoverlay)
+[![App Extension](https://img.shields.io/npm/v/@quasar/quasar-app-extension-qoverlay/beta?label=@quasar/quasar-app-extension-qoverlay)](https://www.npmjs.com/package/@quasar/quasar-app-extension-qoverlay)
 
 QOverlay provides fullscreen and component-scoped overlays for Vue and Quasar applications.
 
