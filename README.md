@@ -5,11 +5,14 @@
 
 QOverlay provides fullscreen and component-scoped overlays for Vue and Quasar applications.
 
-## Packages
+# Structure
 
-- [packages/ui](packages/ui) - standalone Vue/Quasar component package.
-- [packages/app-extension](packages/app-extension) - Quasar App Extension wrapper.
-- [packages/docs](packages/docs) - documentation, demos, and examples.
+This is a pnpm workspace mono-repo. You cannot use npm for building.
+
+- [/ui](packages/ui) - standalone npm package (go here for more information)
+- [/app-extension](packages/app-extension) - Quasar app extension
+- [/docs](packages/docs) - Q-Press documentation site with docs, demos, and examples
+- [live demo](https://qoverlay.netlify.app/) - **live Q-Press docs, demos, and examples**
 
 ## Install
 
