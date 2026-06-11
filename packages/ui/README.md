@@ -1,6 +1,6 @@
 # QOverlay
 
-[![npm](https://img.shields.io/npm/v/@quasar/quasar-ui-qoverlay/beta?label=@quasar/quasar-ui-qoverlay)](https://www.npmjs.com/package/@quasar/quasar-ui-qoverlay)
+[![npm](https://img.shields.io/npm/v/@quasar/quasar-ui-qoverlay?label=@quasar/quasar-ui-qoverlay)](https://www.npmjs.com/package/@quasar/quasar-ui-qoverlay)
 [![npm](https://img.shields.io/npm/dt/@quasar/quasar-ui-qoverlay.svg)](https://www.npmjs.com/package/@quasar/quasar-ui-qoverlay)
 
 QOverlay is a Vue 3 and Quasar component for fullscreen and component-scoped overlays.
@@ -8,13 +8,13 @@ QOverlay is a Vue 3 and Quasar component for fullscreen and component-scoped ove
 ## Install
 
 ```bash
-pnpm add @quasar/quasar-ui-qoverlay@beta
+pnpm add @quasar/quasar-ui-qoverlay
 # or
-bun add @quasar/quasar-ui-qoverlay@beta
+bun add @quasar/quasar-ui-qoverlay
 # or
-yarn add @quasar/quasar-ui-qoverlay@beta
+yarn add @quasar/quasar-ui-qoverlay
 # or
-npm install @quasar/quasar-ui-qoverlay@beta
+npm install @quasar/quasar-ui-qoverlay
 ```
 
 ## Quasar Boot File
@@ -57,10 +57,10 @@ The UMD build exports `window.QOverlay`.
 
 ```html
 <link
-  href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay@beta/dist/index.min.css"
+  href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay/dist/index.min.css"
   rel="stylesheet"
 />
-<script src="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay@beta/dist/index.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qoverlay/dist/index.umd.min.js"></script>
 ```
 
 ## Support

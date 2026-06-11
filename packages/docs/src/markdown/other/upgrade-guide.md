@@ -15,27 +15,27 @@ tooling.
 - Vue 3 and Quasar v2.
 - Quasar CLI Vite with `@quasar/app-vite` >=3.0.0-rc.1 for the App Extension.
 - Node.js 22.13 or newer.
-- pnpm 11.4 or newer when working in this repository.
+- pnpm 11.5 or newer when working in this repository.
 
 ## Update Packages
 
 For Quasar App Extension installs:
 
 ```bash
-quasar ext add @quasar/qoverlay@beta
+quasar ext add @quasar/qoverlay
 ```
 
 For direct UI package installs:
 
 ```tabs
 <<| bash pnpm |>>
-pnpm add @quasar/quasar-ui-qoverlay@beta
+pnpm add @quasar/quasar-ui-qoverlay
 <<| bash bun |>>
-bun add @quasar/quasar-ui-qoverlay@beta
+bun add @quasar/quasar-ui-qoverlay
 <<| bash yarn |>>
-yarn add @quasar/quasar-ui-qoverlay@beta
+yarn add @quasar/quasar-ui-qoverlay
 <<| bash npm |>>
-npm install @quasar/quasar-ui-qoverlay@beta
+npm install @quasar/quasar-ui-qoverlay
 ```
 
 ## Import Changes

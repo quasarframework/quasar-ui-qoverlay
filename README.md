@@ -1,7 +1,7 @@
 # QOverlay
 
-[![UI package](https://img.shields.io/npm/v/@quasar/quasar-ui-qoverlay/beta?label=@quasar/quasar-ui-qoverlay)](https://www.npmjs.com/package/@quasar/quasar-ui-qoverlay)
-[![App Extension](https://img.shields.io/npm/v/@quasar/quasar-app-extension-qoverlay/beta?label=@quasar/quasar-app-extension-qoverlay)](https://www.npmjs.com/package/@quasar/quasar-app-extension-qoverlay)
+[![UI package](https://img.shields.io/npm/v/@quasar/quasar-ui-qoverlay?label=@quasar/quasar-ui-qoverlay)](https://www.npmjs.com/package/@quasar/quasar-ui-qoverlay)
+[![App Extension](https://img.shields.io/npm/v/@quasar/quasar-app-extension-qoverlay?label=@quasar/quasar-app-extension-qoverlay)](https://www.npmjs.com/package/@quasar/quasar-app-extension-qoverlay)
 
 QOverlay provides fullscreen and component-scoped overlays for Vue and Quasar applications.
 
@@ -17,15 +17,15 @@ This is a pnpm workspace mono-repo. You cannot use npm for building.
 ## Install
 
 ```bash
-pnpm add @quasar/quasar-ui-qoverlay@beta
+pnpm add @quasar/quasar-ui-qoverlay
 # or
-bun add @quasar/quasar-ui-qoverlay@beta
+bun add @quasar/quasar-ui-qoverlay
 # or
-yarn add @quasar/quasar-ui-qoverlay@beta
+yarn add @quasar/quasar-ui-qoverlay
 # or
-npm install @quasar/quasar-ui-qoverlay@beta
+npm install @quasar/quasar-ui-qoverlay
 # or, in a Quasar CLI project
-quasar ext add @quasar/qoverlay@beta
+quasar ext add @quasar/qoverlay
 ```
 
 ## Development

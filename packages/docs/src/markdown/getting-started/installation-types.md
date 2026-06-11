@@ -19,12 +19,6 @@ To add QOverlay to your Quasar application, run the following in your Quasar app
 quasar ext add @quasar/qoverlay
 ```
 
-While QOverlay v3 is in beta, install with:
-
-```bash
-quasar ext add @quasar/qoverlay@beta
-```
-
 The QOverlay v3 App Extension targets Quasar CLI Vite 3 and requires `@quasar/app-vite` >=3.0.0-rc.1. It does not support webpack-based Quasar applications.
 
 ### Manual Boot File
@@ -33,13 +27,13 @@ If you do not install through the App Extension, install the UI package directly
 
 ```tabs
 <<| bash pnpm |>>
-pnpm add @quasar/quasar-ui-qoverlay@beta
+pnpm add @quasar/quasar-ui-qoverlay
 <<| bash bun |>>
-bun add @quasar/quasar-ui-qoverlay@beta
+bun add @quasar/quasar-ui-qoverlay
 <<| bash yarn |>>
-yarn add @quasar/quasar-ui-qoverlay@beta
+yarn add @quasar/quasar-ui-qoverlay
 <<| bash npm |>>
-npm install @quasar/quasar-ui-qoverlay@beta
+npm install @quasar/quasar-ui-qoverlay
 ```
 
 Then create and register a boot file:
