@@ -2,8 +2,11 @@
 
 [![UI package](https://img.shields.io/npm/v/@quasar/quasar-ui-qoverlay?label=@quasar/quasar-ui-qoverlay)](https://www.npmjs.com/package/@quasar/quasar-ui-qoverlay)
 [![App Extension](https://img.shields.io/npm/v/@quasar/quasar-app-extension-qoverlay?label=@quasar/quasar-app-extension-qoverlay)](https://www.npmjs.com/package/@quasar/quasar-app-extension-qoverlay)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/08330ffc-f956-4de1-8680-f4cda36974c7/deploy-status)](https://app.netlify.com/projects/qoverlay/deploys)
 
 QOverlay provides fullscreen and component-scoped overlays for Vue and Quasar applications.
+
+[Live Q-Press documentation site](https://qoverlay.netlify.app/)
 
 # Structure
 
