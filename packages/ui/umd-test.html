@@ -129,6 +129,11 @@
 
     <script>
       const { onBeforeUnmount, watch, ref } = Vue;
+      const overlayPlugin = globalThis.QOverlay;
+      const bundleReady =
+        overlayPlugin !== void 0 &&
+        typeof overlayPlugin.install === "function" &&
+        overlayPlugin.QOverlay !== void 0;
       const app = Vue.createApp({
         setup() {
           let timerId = null;
@@ -162,7 +167,7 @@
               clearTimeout(timerId);
               if (val) {
                 waiting.value = true;
-                this.timerId = setTimeout(() => {
+                timerId = setTimeout(() => {
                   waiting.value = false;
                 }, 2000);
               } else {
@@ -172,7 +177,7 @@
           );
 
           return {
-            version: QOverlay.version,
+            version: bundleReady === true ? overlayPlugin.version : "bundle missing",
             fullscreen,
             component,
             waiting,
@@ -182,7 +187,9 @@
       });
 
       app.use(Quasar);
-      app.use(QOverlay);
+      if (bundleReady === true) {
+        app.use(overlayPlugin);
+      }
       app.mount("#q-app");
     </script>
   </body>
