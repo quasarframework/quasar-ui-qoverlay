@@ -44,23 +44,23 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { QOverlay } from "@quasar/quasar-ui-qoverlay";
+import { ref } from 'vue'
+import { QOverlay } from '@quasar/quasar-ui-qoverlay'
 
-const show = ref(false);
-const opacity = ref(0.55);
-const backgroundColor = ref("#1d4ed8");
+const show = ref(false)
+const opacity = ref(0.55)
+const backgroundColor = ref('#1d4ed8')
 
 const colorOptions = [
-  { label: "Ocean", color: "#1d4ed8", textColor: "white" },
-  { label: "Grape", color: "#7c3aed", textColor: "white" },
-  { label: "Slate", color: "#0f172a", textColor: "white" },
-  { label: "Sunset", color: "#ea580c", textColor: "white" },
-];
+  { label: 'Ocean', color: '#1d4ed8', textColor: 'white' },
+  { label: 'Grape', color: '#7c3aed', textColor: 'white' },
+  { label: 'Slate', color: '#0f172a', textColor: 'white' },
+  { label: 'Sunset', color: '#ea580c', textColor: 'white' },
+]
 
 function showColorOverlay(color: string): void {
-  backgroundColor.value = color;
-  show.value = true;
+  backgroundColor.value = color
+  show.value = true
 }
 </script>
 

@@ -183,87 +183,87 @@
 </template>
 
 <script setup lang="ts">
-import { fabGithub } from "@quasar/extras/fontawesome-v7";
-import { biArrowRightCircle } from "@quasar/extras/bootstrap-icons";
-import siteConfig from "../../siteConfig";
+import { fabGithub } from '@quasar/extras/fontawesome-v7'
+import { biArrowRightCircle } from '@quasar/extras/bootstrap-icons'
+import siteConfig from '../../siteConfig'
 
-const productName = "QOverlay";
-const logoSrc = "/app-logo.svg";
-const logoAlt = "QOverlay Logo";
-const githubTreeUrl = "https://github.com/quasarframework/quasar-ui-qoverlay/tree/v3-beta";
-const githubRepoUrl = "https://github.com/quasarframework/quasar-ui-qoverlay";
-const heroEyebrow = "Vue 3 + Quasar 2";
+const productName = 'QOverlay'
+const logoSrc = '/app-logo.svg'
+const logoAlt = 'QOverlay Logo'
+const githubTreeUrl = 'https://github.com/quasarframework/quasar-ui-qoverlay/tree/v3-beta'
+const githubRepoUrl = 'https://github.com/quasarframework/quasar-ui-qoverlay'
+const heroEyebrow = 'Vue 3 + Quasar 2'
 const heroLede =
-  "Pause interaction cleanly across full pages or individual surfaces with overlays that feel intentional instead of improvised loading layers.";
-const previewKicker = "Blocking States";
-const previewTitle = "Full-screen and scoped overlays with a tighter, calmer presentation";
+  'Pause interaction cleanly across full pages or individual surfaces with overlays that feel intentional instead of improvised loading layers.'
+const previewKicker = 'Blocking States'
+const previewTitle = 'Full-screen and scoped overlays with a tighter, calmer presentation'
 const previewBody =
-  "QOverlay helps you communicate loading, blocking, and wait states without inventing a different pattern for each screen, card, or async workflow in the app.";
+  'QOverlay helps you communicate loading, blocking, and wait states without inventing a different pattern for each screen, card, or async workflow in the app.'
 const sectionTitle =
-  "A focused overlay component for blocking states, loading flows, and custom surface messaging";
+  'A focused overlay component for blocking states, loading flows, and custom surface messaging'
 const sectionText =
-  "QOverlay keeps the API tight: full-screen or local overlays, branded presentation, and enough control to make waiting states feel deliberate instead of noisy.";
+  'QOverlay keeps the API tight: full-screen or local overlays, branded presentation, and enough control to make waiting states feel deliberate instead of noisy.'
 
-const heroPills = ["Fullscreen", "Scoped", "Loading States", "Blocking UI", "Custom Content"];
+const heroPills = ['Fullscreen', 'Scoped', 'Loading States', 'Blocking UI', 'Custom Content']
 
 const previewImages = [
   {
-    src: "/qoverlay.png",
-    alt: "QOverlay preview",
+    src: '/qoverlay.png',
+    alt: 'QOverlay preview',
   },
   {
-    src: "/qoverlay-social-preview.png",
-    alt: "QOverlay alternate preview",
+    src: '/qoverlay-social-preview.png',
+    alt: 'QOverlay alternate preview',
   },
-];
+]
 
 const featureCards = [
   {
-    icon: "fullscreen",
-    title: "Full-Screen Blocking",
-    body: "Pause the whole application surface when a workflow needs exclusive attention.",
+    icon: 'fullscreen',
+    title: 'Full-Screen Blocking',
+    body: 'Pause the whole application surface when a workflow needs exclusive attention.',
   },
   {
-    icon: "crop_free",
-    title: "Scoped Overlays",
-    body: "Target a single card, panel, or component instead of blanketing the whole page every time.",
+    icon: 'crop_free',
+    title: 'Scoped Overlays',
+    body: 'Target a single card, panel, or component instead of blanketing the whole page every time.',
   },
   {
-    icon: "hourglass_top",
-    title: "Loading and Wait States",
-    body: "Communicate asynchronous work clearly so users understand why interaction is temporarily paused.",
+    icon: 'hourglass_top',
+    title: 'Loading and Wait States',
+    body: 'Communicate asynchronous work clearly so users understand why interaction is temporarily paused.',
   },
   {
-    icon: "palette",
-    title: "Branded Presentation",
-    body: "Match overlay tone, color, and message styling to the rest of the product instead of using a generic blocker.",
+    icon: 'palette',
+    title: 'Branded Presentation',
+    body: 'Match overlay tone, color, and message styling to the rest of the product instead of using a generic blocker.',
   },
   {
-    icon: "dashboard_customize",
-    title: "Simple Integration",
-    body: "Drop overlays into existing Quasar surfaces without rebuilding the underlying layout structure.",
+    icon: 'dashboard_customize',
+    title: 'Simple Integration',
+    body: 'Drop overlays into existing Quasar surfaces without rebuilding the underlying layout structure.',
   },
   {
-    icon: "view_quilt",
-    title: "Custom Overlay Content",
-    body: "Show spinners, status messages, actions, or compact guidance inside the blocked state when needed.",
+    icon: 'view_quilt',
+    title: 'Custom Overlay Content',
+    body: 'Show spinners, status messages, actions, or compact guidance inside the blocked state when needed.',
   },
-];
+]
 
 const supportItems = [
   {
-    title: "Introduction First",
-    body: "Start with the introduction and install steps so you can decide when a full-screen overlay is better than a scoped one.",
+    title: 'Introduction First',
+    body: 'Start with the introduction and install steps so you can decide when a full-screen overlay is better than a scoped one.',
   },
   {
-    title: "Use the Examples",
-    body: "The development guide and examples are the quickest way to compare blocking patterns across different UI surfaces.",
+    title: 'Use the Examples',
+    body: 'The development guide and examples are the quickest way to compare blocking patterns across different UI surfaces.',
   },
   {
-    title: "Discussions + Issues",
-    body: "Questions, bugs, and feature requests are easiest to track in the QOverlay repo and GitHub Discussions.",
+    title: 'Discussions + Issues',
+    body: 'Questions, bugs, and feature requests are easiest to track in the QOverlay repo and GitHub Discussions.',
   },
-];
+]
 </script>
 
 <style lang="scss" scoped>
@@ -334,7 +334,7 @@ const supportItems = [
   border-radius: 999px;
   background: rgba(255, 245, 242, 0.08);
   color: #ffd4c5;
-  font-family: "Manrope", "Montserrat", "Segoe UI", sans-serif;
+  font-family: 'Manrope', 'Montserrat', 'Segoe UI', sans-serif;
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -353,7 +353,7 @@ const supportItems = [
 
 .hero-title {
   margin: 0;
-  font-family: "Manrope", "Montserrat", "Segoe UI", sans-serif;
+  font-family: 'Manrope', 'Montserrat', 'Segoe UI', sans-serif;
   font-size: clamp(3.2rem, 8vw, 6rem);
   line-height: 0.95;
   font-weight: 800;
@@ -364,7 +364,7 @@ const supportItems = [
 .hero-subtitle {
   max-width: 620px;
   margin: 0;
-  font-family: "Manrope", "Montserrat", "Segoe UI", sans-serif;
+  font-family: 'Manrope', 'Montserrat', 'Segoe UI', sans-serif;
   font-size: clamp(1.15rem, 2vw, 1.45rem);
   line-height: 1.45;
   font-weight: 700;
@@ -437,7 +437,7 @@ const supportItems = [
   column-gap: 12px;
   min-width: 0;
   width: 100%;
-  font-family: "Manrope", "Montserrat", "Segoe UI", sans-serif;
+  font-family: 'Manrope', 'Montserrat', 'Segoe UI', sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
 }
@@ -526,7 +526,7 @@ const supportItems = [
 .section-heading__title,
 .feature-card__title,
 .resource-card__title {
-  font-family: "Manrope", "Montserrat", "Segoe UI", sans-serif;
+  font-family: 'Manrope', 'Montserrat', 'Segoe UI', sans-serif;
   color: #fff8f5;
 }
 
@@ -554,7 +554,7 @@ const supportItems = [
 }
 
 .preview-stack::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 28px 18px 40px;
   z-index: -1;
@@ -652,7 +652,7 @@ const supportItems = [
 }
 
 .feature-card::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0 auto auto 0;
   width: 100%;
@@ -728,7 +728,7 @@ const supportItems = [
 
 .resource-list__title {
   margin-bottom: 6px;
-  font-family: "Manrope", "Montserrat", "Segoe UI", sans-serif;
+  font-family: 'Manrope', 'Montserrat', 'Segoe UI', sans-serif;
   font-size: 0.96rem;
   font-weight: 700;
   color: #ffd9cc;

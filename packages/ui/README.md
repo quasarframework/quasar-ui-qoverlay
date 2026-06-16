@@ -20,13 +20,13 @@ npm install @quasar/quasar-ui-qoverlay
 ## Quasar Boot File
 
 ```ts
-import { defineBoot } from "#q-app";
-import QOverlay from "@quasar/quasar-ui-qoverlay";
-import "@quasar/quasar-ui-qoverlay/dist/index.css";
+import { defineBoot } from '#q-app'
+import QOverlay from '@quasar/quasar-ui-qoverlay'
+import '@quasar/quasar-ui-qoverlay/dist/index.css'
 
 export default defineBoot(({ app }) => {
-  app.use(QOverlay);
-});
+  app.use(QOverlay)
+})
 ```
 
 ## Direct Component Import
@@ -43,11 +43,11 @@ export default defineBoot(({ app }) => {
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { QOverlay } from "@quasar/quasar-ui-qoverlay";
-import "@quasar/quasar-ui-qoverlay/dist/index.css";
+import { ref } from 'vue'
+import { QOverlay } from '@quasar/quasar-ui-qoverlay'
+import '@quasar/quasar-ui-qoverlay/dist/index.css'
 
-const loading = ref(false);
+const loading = ref(false)
 </script>
 ```
 

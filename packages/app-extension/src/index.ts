@@ -5,16 +5,16 @@
  * Docs: https://quasar.dev/app-extensions/development-guide/index-api
  */
 
-import { defineIndexScript } from "#q-app";
+import { defineIndexScript } from '#q-app'
 
 export default defineIndexScript((api) => {
-  api.compatibleWith("quasar", "^2.0.0");
-  api.compatibleWith("@quasar/app-vite", ">=3.0.0-rc.2");
+  api.compatibleWith('quasar', '^2.0.0')
+  api.compatibleWith('@quasar/app-vite', '>=3.0.0-rc.2')
 
-  api.registerDescribeApi("QOverlay", "~@quasar/quasar-ui-qoverlay/dist/api/QOverlay.json");
+  api.registerDescribeApi('QOverlay', '~@quasar/quasar-ui-qoverlay/dist/api/QOverlay.json')
 
   api.extendQuasarConf(() => ({
-    boot: ["~@quasar/quasar-app-extension-qoverlay/dist/boot/vite-register.js"],
-    css: ["~@quasar/quasar-ui-qoverlay/src/index.scss"],
-  }));
-});
+    boot: ['~@quasar/quasar-app-extension-qoverlay/dist/boot/vite-register.js'],
+    css: ['~@quasar/quasar-ui-qoverlay/src/index.scss'],
+  }))
+})

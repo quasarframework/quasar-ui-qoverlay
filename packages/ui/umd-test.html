@@ -111,7 +111,6 @@
                   </q-card-actions>
                 </q-card>
               </q-overlay>
-
             </div>
           </q-page>
         </q-page-container>
@@ -123,69 +122,69 @@
     <script src="dist/index.umd.js?ae=qoverlay"></script>
 
     <script>
-      const { onBeforeUnmount, watch, ref } = Vue;
-      const overlayPlugin = globalThis.QOverlay;
+      const { onBeforeUnmount, watch, ref } = Vue
+      const overlayPlugin = globalThis.QOverlay
       const bundleReady =
         overlayPlugin !== void 0 &&
-        typeof overlayPlugin.install === "function" &&
-        overlayPlugin.QOverlay !== void 0;
+        typeof overlayPlugin.install === 'function' &&
+        overlayPlugin.QOverlay !== void 0
       const app = Vue.createApp({
         setup() {
-          let timerId = null;
+          let timerId = null
           const fullscreen = ref(false),
             component = ref(false),
             waiting = ref(false),
-            noScroll = ref(false);
+            noScroll = ref(false)
 
           onBeforeUnmount(() => {
-            clearTimeout(timerId);
-          });
+            clearTimeout(timerId)
+          })
 
           watch(
             () => fullscreen.value,
             (val) => {
-              clearTimeout(timerId);
+              clearTimeout(timerId)
               if (val) {
-                waiting.value = true;
+                waiting.value = true
                 timerId = setTimeout(() => {
-                  waiting.value = false;
-                }, 2000);
+                  waiting.value = false
+                }, 2000)
               } else {
-                waiting.value = false;
+                waiting.value = false
               }
             },
-          );
+          )
 
           watch(
             () => component.value,
             (val) => {
-              clearTimeout(timerId);
+              clearTimeout(timerId)
               if (val) {
-                waiting.value = true;
+                waiting.value = true
                 timerId = setTimeout(() => {
-                  waiting.value = false;
-                }, 2000);
+                  waiting.value = false
+                }, 2000)
               } else {
-                waiting.value = false;
+                waiting.value = false
               }
             },
-          );
+          )
 
           return {
-            version: bundleReady === true ? overlayPlugin.version : "bundle missing",
+            version: bundleReady === true ? overlayPlugin.version : 'bundle missing',
             fullscreen,
             component,
             waiting,
             noScroll,
-          };
+          }
         },
-      });
+      })
 
-      app.use(Quasar);
+      app.use(Quasar)
       if (bundleReady === true) {
-        app.use(overlayPlugin);
+        app.use(overlayPlugin)
       }
-      app.mount("#q-app");
+      app.mount('#q-app')
     </script>
   </body>
 </html>

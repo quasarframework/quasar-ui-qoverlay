@@ -13,7 +13,7 @@
           <q-spinner v-if="waiting" color="yellow" size="4em" />
           <q-icon v-else name="check_circle" color="positive" size="4em" />
 
-          <div class="text-h6">{{ waiting ? "Processing..." : "Ready" }}</div>
+          <div class="text-h6">{{ waiting ? 'Processing...' : 'Ready' }}</div>
 
           <q-btn
             v-if="waiting === false"
@@ -47,39 +47,39 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeUnmount, ref } from "vue";
-import { QOverlay } from "@quasar/quasar-ui-qoverlay";
+import { onBeforeUnmount, ref } from 'vue'
+import { QOverlay } from '@quasar/quasar-ui-qoverlay'
 
-const show = ref(false);
-const waiting = ref(false);
-const noScroll = ref(true);
-let timer: ReturnType<typeof setTimeout> | undefined;
+const show = ref(false)
+const waiting = ref(false)
+const noScroll = ref(true)
+let timer: ReturnType<typeof setTimeout> | undefined
 
 function clearTimer(): void {
   if (timer !== undefined) {
-    clearTimeout(timer);
-    timer = undefined;
+    clearTimeout(timer)
+    timer = undefined
   }
 }
 
 function showFullscreenOverlay(): void {
-  clearTimer();
-  show.value = true;
-  waiting.value = true;
+  clearTimer()
+  show.value = true
+  waiting.value = true
 
   timer = setTimeout(() => {
-    waiting.value = false;
-    timer = undefined;
-  }, 1600);
+    waiting.value = false
+    timer = undefined
+  }, 1600)
 }
 
 function hideOverlay(): void {
-  clearTimer();
-  waiting.value = false;
-  show.value = false;
+  clearTimer()
+  waiting.value = false
+  show.value = false
 }
 
-onBeforeUnmount(clearTimer);
+onBeforeUnmount(clearTimer)
 </script>
 
 <style scoped>

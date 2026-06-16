@@ -42,8 +42,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { QOverlay } from "@quasar/quasar-ui-qoverlay";
+import { ref } from 'vue'
+import { QOverlay } from '@quasar/quasar-ui-qoverlay'
 
-const showBackdrop = ref(false);
+const showBackdrop = ref(false)
 </script>

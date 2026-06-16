@@ -30,39 +30,39 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeUnmount, ref } from "vue";
-import { QOverlay } from "@quasar/quasar-ui-qoverlay";
+import { onBeforeUnmount, ref } from 'vue'
+import { QOverlay } from '@quasar/quasar-ui-qoverlay'
 
-const show = ref(false);
-const showMenu = ref(false);
-const menuOptions = ref<{ icon: string; label: string }[]>([]);
-let timer: ReturnType<typeof setTimeout> | undefined;
+const show = ref(false)
+const showMenu = ref(false)
+const menuOptions = ref<{ icon: string; label: string }[]>([])
+let timer: ReturnType<typeof setTimeout> | undefined
 
 function loadMenuOptions(): void {
   if (timer !== undefined) {
-    clearTimeout(timer);
+    clearTimeout(timer)
   }
 
-  showMenu.value = false;
-  menuOptions.value = [];
-  show.value = true;
+  showMenu.value = false
+  menuOptions.value = []
+  show.value = true
 
   // Simulate fetching menu options from a remote endpoint before opening the menu.
   timer = setTimeout(() => {
     menuOptions.value = [
-      { icon: "account_tree", label: "Branches" },
-      { icon: "eco", label: "Leaves" },
-      { icon: "foundation", label: "Roots" },
-    ];
-    show.value = false;
-    showMenu.value = true;
-    timer = undefined;
-  }, 900);
+      { icon: 'account_tree', label: 'Branches' },
+      { icon: 'eco', label: 'Leaves' },
+      { icon: 'foundation', label: 'Roots' },
+    ]
+    show.value = false
+    showMenu.value = true
+    timer = undefined
+  }, 900)
 }
 
 onBeforeUnmount(() => {
   if (timer !== undefined) {
-    clearTimeout(timer);
+    clearTimeout(timer)
   }
-});
+})
 </script>

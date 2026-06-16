@@ -35,30 +35,30 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeUnmount, ref } from "vue";
-import { QOverlay } from "@quasar/quasar-ui-qoverlay";
+import { onBeforeUnmount, ref } from 'vue'
+import { QOverlay } from '@quasar/quasar-ui-qoverlay'
 
-const show = ref(false);
-let timer: ReturnType<typeof setTimeout> | undefined;
+const show = ref(false)
+let timer: ReturnType<typeof setTimeout> | undefined
 
 function showComponentOverlay(): void {
   if (timer !== undefined) {
-    clearTimeout(timer);
+    clearTimeout(timer)
   }
 
-  show.value = true;
+  show.value = true
 
   timer = setTimeout(() => {
-    show.value = false;
-    timer = undefined;
-  }, 1600);
+    show.value = false
+    timer = undefined
+  }, 1600)
 }
 
 onBeforeUnmount(() => {
   if (timer !== undefined) {
-    clearTimeout(timer);
+    clearTimeout(timer)
   }
-});
+})
 </script>
 
 <style scoped>
