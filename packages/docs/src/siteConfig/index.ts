@@ -204,7 +204,7 @@ const footerLinks = [
 const docsMenus: SiteMenuItem[] = [
   {
     name: 'Getting Started',
-    mq: 470,
+    mq: 850,
     children: [
       { name: 'Introduction', path: '/getting-started/introduction' },
       { name: 'Installation Types', path: '/getting-started/installation-types' },
@@ -212,7 +212,7 @@ const docsMenus: SiteMenuItem[] = [
   },
   {
     name: 'Developing',
-    mq: 600,
+    mq: 1000,
     children: [
       { name: 'Using QOverlay', path: '/developing/using-qoverlay' },
       { name: 'FAQ', path: '/developing/faq' },
@@ -220,7 +220,7 @@ const docsMenus: SiteMenuItem[] = [
   },
   {
     name: 'Other',
-    mq: 760,
+    mq: 1140,
     children: [
       { name: 'Upgrade Guide', path: '/other/upgrade-guide' },
       { name: 'Releases', path: '/other/releases' },
