@@ -114,6 +114,10 @@ export interface SiteConfig {
 }
 
 function getSidebarPath(item: SiteMenuItem): string {
+  if (item.path === '') {
+    return ''
+  }
+
   if (item.external === true) {
     return item.path ?? slugify(item.name)
   }
