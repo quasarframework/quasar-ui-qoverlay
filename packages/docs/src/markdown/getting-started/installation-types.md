@@ -36,7 +36,7 @@ To add QOverlay to your Quasar application, run the following in your Quasar app
 quasar ext add @quasar/qoverlay
 ```
 
-The QOverlay v3 App Extension targets Quasar CLI Vite 3 and requires `@quasar/app-vite` >=3.0.0-rc.5. It does not support webpack-based Quasar applications.
+The QOverlay v3 App Extension targets Quasar CLI Vite 3 and requires `@quasar/app-vite` >=3.0.0-rc.6. It does not support webpack-based Quasar applications.
 
 ### Manual Boot File
 

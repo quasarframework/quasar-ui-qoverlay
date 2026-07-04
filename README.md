@@ -16,7 +16,7 @@ QOverlay provides fullscreen and component-scoped overlays for Vue and Quasar ap
 
 ## QOverlay v3.0.0 Release Candidate
 
-QOverlay v3 prepares the project for Quasar CLI Vite 3. The app extension is Vite-only, requires `@quasar/app-vite` >=3.0.0-rc.5, and no longer supports webpack-based Quasar apps.
+QOverlay v3 prepares the project for Quasar CLI Vite 3. The app extension is Vite-only, requires `@quasar/app-vite` >=3.0.0-rc.6, and no longer supports webpack-based Quasar apps.
 
 # Structure
 
