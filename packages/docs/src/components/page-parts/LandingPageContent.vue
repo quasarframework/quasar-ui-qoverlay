@@ -211,10 +211,6 @@ const previewImages = [
     src: '/qoverlay.png',
     alt: 'QOverlay preview',
   },
-  {
-    src: '/qoverlay-social-preview.png',
-    alt: 'QOverlay alternate preview',
-  },
 ]
 
 const featureCards = [
