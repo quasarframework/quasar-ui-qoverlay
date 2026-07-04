@@ -1,6 +1,6 @@
 {
   "name": "@quasar/quasar-ui-qoverlay",
-  "version": "3.0.0-rc.0",
+  "version": "3.0.0",
   "description": "QOverlay - fullscreen and component-scoped overlays for Quasar",
   "keywords": [
     "blocker",

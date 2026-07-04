@@ -190,7 +190,7 @@ import siteConfig from '../../siteConfig'
 const productName = 'QOverlay'
 const logoSrc = '/app-logo.svg'
 const logoAlt = 'QOverlay Logo'
-const githubTreeUrl = 'https://github.com/quasarframework/quasar-ui-qoverlay/tree/v3-beta'
+const githubTreeUrl = 'https://github.com/quasarframework/quasar-ui-qoverlay/tree/main'
 const githubRepoUrl = 'https://github.com/quasarframework/quasar-ui-qoverlay'
 const heroEyebrow = 'Vue 3 + Quasar 2'
 const heroLede =

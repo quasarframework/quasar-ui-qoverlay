@@ -37,7 +37,7 @@ Short user-facing summary of what changed for QOverlay component/app-extension u
 - Node.js: `>=22.13`
 - Quasar: `^2.21.0`
 - Quasar App Vite target: `@quasar/app-vite@3.0.0-rc.6`
-- npm dist-tag: `beta`
+- npm dist-tag: `latest`
 
 ## Installation
 
@@ -53,7 +53,7 @@ npm install @quasar/quasar-ui-qoverlay
 quasar ext add @quasar/qoverlay
 ```
 
-Add the appropriate prerelease tag, such as `@beta`, only when publishing under that dist-tag.
+Add a prerelease tag, such as `@beta`, only when publishing a prerelease under that dist-tag.
 
 ## Documentation
 
