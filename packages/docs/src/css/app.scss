@@ -1,9 +1,11 @@
 // app global css in SCSS form
+@use 'sass:meta';
+
 @import '../.q-press/css/app.scss';
 @import '../.q-press/css/fonts.scss';
 
 @import 'quasar/src/css/variables.sass';
-@import '../../../ui/src/index.scss';
+@include meta.load-css('../../../ui/src/index.scss');
 
 :root {
   --background-color: transparent;
