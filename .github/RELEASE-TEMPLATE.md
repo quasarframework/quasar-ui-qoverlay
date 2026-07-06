@@ -35,8 +35,8 @@ Short user-facing summary of what changed for QOverlay component/app-extension u
 ## Compatibility
 
 - Node.js: `>=22.13`
-- Quasar: `^2.21.0`
-- Quasar App Vite target: `@quasar/app-vite@3.0.0-rc.6`
+- Quasar: `^2.21.1`
+- Quasar App Vite target: `@quasar/app-vite@3.0.0`
 - npm dist-tag: `latest`
 
 ## Installation
@@ -53,12 +53,10 @@ npm install @quasar/quasar-ui-qoverlay
 quasar ext add @quasar/qoverlay
 ```
 
-Add a prerelease tag, such as `@beta`, only when publishing a prerelease under that dist-tag.
-
 ## Documentation
 
 - Docs: https://qoverlay.netlify.app/
-- Installation: https://qoverlay.netlify.app/getting-started/installation
+- Installation: https://qoverlay.netlify.app/getting-started/installation-types
 - Upgrade Guide: https://qoverlay.netlify.app/other/upgrade-guide
 
 ## Full Changelog

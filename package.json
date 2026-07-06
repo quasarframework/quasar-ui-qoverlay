@@ -1,6 +1,6 @@
 {
   "name": "quasar-ui-qoverlay-workspace",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "private": true,
   "description": "QOverlay mono-repo",
   "license": "MIT",
@@ -17,7 +17,6 @@
     "check:qpress": "pnpm --dir packages/docs exec qpress check --root ../.. --src-dir packages/docs/src",
     "ci:publish": "pnpm --filter @quasar/quasar-ui-qoverlay publish --access public --publish-branch main && pnpm --filter @quasar/quasar-app-extension-qoverlay publish --access public --publish-branch main",
     "ci:publish:latest": "pnpm --filter @quasar/quasar-ui-qoverlay publish --access public --publish-branch main --tag latest && pnpm --filter @quasar/quasar-app-extension-qoverlay publish --access public --publish-branch main --tag latest",
-    "ci:publish:beta": "pnpm --filter @quasar/quasar-ui-qoverlay publish --access public --publish-branch v3-beta --tag beta --no-git-checks && pnpm --filter @quasar/quasar-app-extension-qoverlay publish --access public --publish-branch v3-beta --tag beta --no-git-checks",
     "test": "vitest run",
     "coverage": "vitest run --coverage",
     "typecheck": "pnpm --filter @quasar/quasar-ui-qoverlay typecheck && pnpm --filter docs typecheck",
@@ -33,17 +32,17 @@
   },
   "devDependencies": {
     "@types/node": "^26.1.0",
-    "@vitest/coverage-v8": "^4.1.9",
+    "@vitest/coverage-v8": "^4.1.10",
     "npm-check-updates": "^22.2.9",
     "oxfmt": "^0.57.0",
     "oxlint": "^1.72.0",
     "typescript": "~6.0.3",
-    "vitest": "^4.1.9",
+    "vitest": "^4.1.10",
     "vue": "^3.5.39"
   },
   "engines": {
     "node": ">=22.13",
     "pnpm": ">=11.5.0"
   },
-  "packageManager": "pnpm@11.8.0"
+  "packageManager": "pnpm@11.10.0"
 }

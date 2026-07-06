@@ -1,6 +1,6 @@
 {
   "name": "@quasar/quasar-app-extension-qoverlay",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "QOverlay App Extension for Quasar",
   "keywords": [
     "app",
@@ -40,12 +40,12 @@
     "@quasar/quasar-ui-qoverlay": "workspace:^"
   },
   "devDependencies": {
-    "@quasar/app-vite": "3.0.0-rc.6",
-    "quasar": "^2.21.0",
+    "@quasar/app-vite": "3.0.0",
+    "quasar": "^2.21.1",
     "typescript": "~6.0.3"
   },
   "peerDependencies": {
-    "@quasar/app-vite": ">=3.0.0-rc.6"
+    "@quasar/app-vite": ">=3.0.0"
   },
   "engines": {
     "node": ">=22.13",
