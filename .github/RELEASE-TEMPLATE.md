@@ -6,27 +6,30 @@ Release drafting notes:
 - Keep the summary short and concrete.
 -->
 
-# QOverlay v3.x.x
+# QOverlay v3.0.2
 
-Release date: YYYY-MM-DD
+Release date: 2026-08-19
 
 ## Summary
 
-Short user-facing summary of what changed for QOverlay component/app-extension users.
+QOverlay v3.0.2 improves Quasar CLI Vite integration by keeping the UI package out of
+Vite dependency optimization. This ensures its Quasar imports use the application's runtime
+instance.
 
 ## What's Changed
 
 **Features:**
 
-- `commitid` Describe new component, app-extension, public API, styling, or integration behavior.
+- None.
 
 **Fixes:**
 
-- `commitid` Describe the bug, who it affected, and what now works correctly.
+- `e29783f` Exclude the QOverlay UI package from Vite dependency optimization when installed
+  through the App Extension, preventing a separately optimized Quasar runtime.
 
 **Maintenance:**
 
-- `commitid` Include only consumer-relevant maintenance, such as package prep, compatibility updates, or dependency updates that users may notice.
+- `a7cb322` Refresh dependencies and the QPress documentation runtime.
 
 ## Breaking Changes
 
@@ -35,8 +38,8 @@ Short user-facing summary of what changed for QOverlay component/app-extension u
 ## Compatibility
 
 - Node.js: `>=22.13`
-- Quasar: `^2.21.1`
-- Quasar App Vite target: `@quasar/app-vite@3.0.0`
+- Quasar: `^2.25.0`
+- Quasar App Vite target: `@quasar/app-vite@3.6.0`
 - npm dist-tag: `latest`
 
 ## Installation
@@ -61,7 +64,7 @@ quasar ext add @quasar/qoverlay
 
 ## Full Changelog
 
-https://github.com/quasarframework/quasar-ui-qoverlay/compare/PREVIOUS_TAG...CURRENT_TAG
+https://github.com/quasarframework/quasar-ui-qoverlay/compare/v3.0.1...v3.0.2
 
 ## Donations
 
